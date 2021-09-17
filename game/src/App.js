@@ -17,17 +17,20 @@ function App() {
       <Route exact path='/'>
         <Home />
       </Route>
-      <Route path='/pokemon'>
+      <Route path='/pokemons'>
         <CharacterSelect />
       </Route>
-      <Route path='/pokemon/:id'>
+      <Route path='/pokemons/:id'>
         <CharacterSelect />
       </Route>
       <Route to='/new'>
         <AddPokémon />
       </Route>
-      <Route path='/pokemon/:id/edit'>
+      <Route path='/pokemons/:id/edit'>
         <EditPokemon />
+      </Route>
+      <Route path='/'>
+        <Ruels />
       </Route>
     </div>
   );
