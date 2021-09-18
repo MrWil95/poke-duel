@@ -11,10 +11,10 @@ export default function CharacterDetails() {
    
    useEffect(() => {
       const getPokemon = async () => {
-               setPokemon(fetchPokemon(id))
-               setLoading(false)
-            }
-            getPokemon()
+         setPokemon(fetchPokemon(id))
+         setLoading(false)
+      }
+      getPokemon()
    }, [id])
 
    if (loading) {

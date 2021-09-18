@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-import CharacterDetails from './CharacterDetails'
 import {fetchPokémon} from '../services'
 // import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
 
@@ -13,7 +12,7 @@ import {fetchPokémon} from '../services'
 
 export default function CharacterSelect() {
    // const [items, setItems] = useState(getItems)
-   const [pokemons, setPokemons] = useState([])
+   const [pokemon, setPokemon] = useState([])
    // const [position, setPosition] = useState(0)
    // const isItemSelected = (id) => !!isItemSelected.find((e) => e === id)
    // const handleClick = (id) => ({getItemById, scrollToItem}) => {
@@ -28,25 +27,27 @@ export default function CharacterSelect() {
 
    useEffect(() => {
       const getPokémon = async () => {
-         setPokemons(await fetchPokémon())
+         setPokemon(await fetchPokémon())
       }
       getPokémon()
 
-   }, [] )
+   }, [])
 
 
    return (
       <div>
          
-         {pokemons.map(pokemon => {
+         {pokemon?.map(pokemon => {
             return (
                <div>
-                  <button><Link to={`/pokemons/${pokemon.id}`} key={pokemon.id}>Start</Link></button>
-                  <img src={pokemon.fields.image} alt={pokemon.fields.image} />
-                  <h3>{pokemon.fields.name}</h3>
-                  <h4>{pokemon.fields.type}</h4>
-                  <h4>{pokemon.fields.attcks}</h4>
-                  <CharacterDetails />
+                  <button>
+                     <Link to={`/pokemon/${pokemon.id}`} key={pokemon.id}>
+                        <img src={pokemon.fields.image} alt={pokemon.fields.id} />
+                        <h3>{pokemon.fields?.name}</h3>
+                        <h4>{pokemon.fields.type}</h4>
+                        <h4>{pokemon.fields.attcks}</h4>
+                     </Link>
+                  </button>
                </div>
             )
          })}
