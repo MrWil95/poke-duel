@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import {fetchPokémon} from '../services'
+
 // import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
 
 // const getItems = () => {
@@ -43,7 +44,7 @@ export default function CharacterSelect() {
                   <button>
                      <Link to={`/pokemon/${pokemon.id}`} key={pokemon.id}>
                         <img src={pokemon.fields.image} alt={pokemon.fields.id} />
-                        <h3>{pokemon.fields?.name}</h3>
+                        <h3>{pokemon.fields.name}</h3>
                         <h4>{pokemon.fields.type}</h4>
                         <h4>{pokemon.fields.attcks}</h4>
                      </Link>

@@ -28,7 +28,7 @@ export default function CharacterDetails() {
          <h3>{pokemon.fields?.type}</h3>
          <h3>{pokemon.fields?.attacks}</h3>
          <p>{pokemon.fields?.attacks_value}</p>
-         <Link to={`/pokemons/${pokemon.id}/edit`}>Edit</Link>
+         <Link to={`/pokemon/${pokemon.id}/edit`}>Edit</Link>
          <DeleteButton id={pokemon.id} />
       </div>
    )
