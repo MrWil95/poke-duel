@@ -18,17 +18,17 @@ function App() {
         </Link>
       </div>
       <Nav />
-      <Route path='/'></Route>
-      <Route exact path='/pokemon'>
+      <Route exact path='/'></Route>
+      <Route exact path='/characterselect'>
         <CharacterSelect />
       </Route>
-      <Route path='/pokemon/:id'>
+      <Route path='/characterselect/:id'>
         <CharacterDetails />
       </Route>
       <Route to='/new'>
         <AddPokémon />
       </Route>
-      <Route path='/pokemon/:id/edit'>
+      <Route path='/pokemonlists/:id/edit'>
         <EditPokemon />
       </Route>
     </div>

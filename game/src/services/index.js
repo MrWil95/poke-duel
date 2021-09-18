@@ -3,7 +3,8 @@ import axios from 'axios'
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY
 
-const URL = `https://api.airtable.com/v0/${airtableBase}/Pokemon`
+const URL = `https://api.airtable.com/v0/${airtableBase}/Pokemonlists`
+
 const config = {
    headers: {
       Authorization: `Bearer ${airtableKey}`,

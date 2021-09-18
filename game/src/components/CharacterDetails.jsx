@@ -5,13 +5,13 @@ import DeleteButton from './DeleteButton'
 import { fetchPokemon } from '../services'
 
 export default function CharacterDetails() {
-   const [pokemon, setPokemon] = useState({})
+   const [pokemonlist, setPokemonList] = useState({})
    const [loading, setLoading] = useState(true)
    const {id} = useParams()
    
    useEffect(() => {
       const getPokemon = async () => {
-         setPokemon(fetchPokemon(id))
+         setPokemonList(fetchPokemon(id))
          setLoading(false)
       }
       getPokemon()
@@ -23,13 +23,13 @@ export default function CharacterDetails() {
 
    return (
       <div>
-         <img src={pokemon.fields?.image} alt={pokemon.fields?.name}/>
-         <h2>{pokemon.fields?.name}</h2>
-         <h3>{pokemon.fields?.type}</h3>
-         <h3>{pokemon.fields?.attacks}</h3>
-         <p>{pokemon.fields?.attacks_value}</p>
-         <Link to={`/pokemon/${pokemon.id}/edit`}>Edit</Link>
-         <DeleteButton id={pokemon.id} />
+         <img src={pokemonlist.fields?.image} alt={pokemonlist.fields?.name}/>
+         <h2>{pokemonlist.fields?.name}</h2>
+         <h3>{pokemonlist.fields?.type}</h3>
+         <h3>{pokemonlist.fields?.attacks}</h3>
+         <p>{pokemonlist.fields?.attacks_value}</p>
+         <Link to={`/pokemon/${pokemonlist.id}/edit`}>Edit</Link>
+         <DeleteButton id={pokemonlist.id} />
       </div>
    )
 }

@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom'
 export default function Nav() {
    return (
       <div>
-         <button><Link to='/pokemon'>Start</Link></button>
+         <Link to='/characterselect'>Start</Link>
          <br />
-         <button><Link to='/new'>Add Pokémon</Link></button>
+         <Link to='/new'>Add Pokémon</Link>
          <br />
-         <button><Link to='/'>Ruels</Link></button>
+         <Link to='/'>Ruels</Link>
       </div>
    )
 }

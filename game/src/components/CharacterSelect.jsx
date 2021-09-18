@@ -2,33 +2,14 @@ import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import {fetchPokémon} from '../services'
 
-// import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
-
-// const getItems = () => {
-//    Array(array.length)
-//       .fill(0)
-//       .map((_, ind) => ({ id: `element-${ind}`}))
-
-// }
-
 export default function CharacterSelect() {
-   // const [items, setItems] = useState(getItems)
-   const [pokemon, setPokemon] = useState([])
-   // const [position, setPosition] = useState(0)
-   // const isItemSelected = (id) => !!isItemSelected.find((e) => e === id)
-   // const handleClick = (id) => ({getItemById, scrollToItem}) => {
-   //    const itemSelected = isItemSelected(id)
-   // }
+   const [pokemonlists, setPokemonLists] = useState([])
+   console.log(pokemonlists)
 
-   // setSelected((currentSelected) => {
-   //    itemSelected
-   //       ? currentSelected.filter((e) => e !== id) 
-   //       : currentSelected
-   // })
 
    useEffect(() => {
       const getPokémon = async () => {
-         setPokemon(await fetchPokémon())
+         setPokemonLists(await fetchPokémon())
       }
       getPokémon()
 
@@ -38,17 +19,11 @@ export default function CharacterSelect() {
    return (
       <div>
          
-         {pokemon?.map(pokemon => {
+         {pokemonlists?.map((pokemonlist) => {
             return (
                <div>
-                  <button>
-                     <Link to={`/pokemon/${pokemon.id}`} key={pokemon.id}>
-                        <img src={pokemon.fields.image} alt={pokemon.fields.id} />
-                        <h3>{pokemon.fields.name}</h3>
-                        <h4>{pokemon.fields.type}</h4>
-                        <h4>{pokemon.fields.attcks}</h4>
-                     </Link>
-                  </button>
+                  <Link to={`/characterselect/${pokemonlist.id}`} key={pokemonlist.id}>
+                  </Link>
                </div>
             )
          })}

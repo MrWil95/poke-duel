@@ -31,7 +31,7 @@ export default function Form(props) {
          <br />
          <label>AttackValues</label>
          <input 
-            type='text'
+            type='number'
             value={attackvalues}
             onChange={(e) => setAttackValues(e.target.value)}
          />
