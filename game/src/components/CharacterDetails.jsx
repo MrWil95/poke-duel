@@ -1,3 +1,4 @@
+import '../css/CharacterDetail.css'
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router'
 import { Link } from 'react-router-dom'
@@ -11,7 +12,7 @@ export default function CharacterDetails() {
    
    useEffect(() => {
       const getPokemon = async () => {
-         setPokemonList(fetchPokemon(id))
+         setPokemonList(await fetchPokemon(id))
          setLoading(false)
       }
       getPokemon()
@@ -22,13 +23,12 @@ export default function CharacterDetails() {
       }
 
    return (
-      <div>
-         <img src={pokemonlist.fields?.image} alt={pokemonlist.fields?.name}/>
+      <div className='Details'>
+         <img src={pokemonlist.fields?.battleimage} alt={pokemonlist.fields?.name}/>
          <h2>{pokemonlist.fields?.name}</h2>
          <h3>{pokemonlist.fields?.type}</h3>
          <h3>{pokemonlist.fields?.attacks}</h3>
-         <p>{pokemonlist.fields?.attacks_value}</p>
-         <Link to={`/pokemon/${pokemonlist.id}/edit`}>Edit</Link>
+         <Link to={`/pokemonlists/${pokemonlist.id}/edit`}>Edit</Link>
          <DeleteButton id={pokemonlist.id} />
       </div>
    )

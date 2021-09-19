@@ -1,5 +1,7 @@
+import '../css/AddPokemon.css'
 import {useState} from 'react'
 import {useHistory} from 'react-router'
+import { Link } from 'react-router-dom'
 import Form from './Form'
 import axios from 'axios'
 
@@ -7,14 +9,13 @@ export default function AddPokémon() {
    const [name, setName] = useState('')
    const [type, setType] = useState('')
    const [attacks, setAttacks] = useState('')
-   const [attackvalues, setAttackValues] = useState('')
    const [image, setImage] = useState('')
    const [battleimage, setBattleImage] = useState('')
    
 
    const airtableBase = process.env.REACT_APP_AIRTABLE_BASE
    const airtableKey = process.env.REACT_APP_AIRTABLE_KEY
-   const URL = `https://api.airtable.com/v0/${airtableBase}/Pokemon`
+   const URL = `https://api.airtable.com/v0/${airtableBase}/Pokemonlists`
 
    const config = {
       headers: {
@@ -30,17 +31,19 @@ export default function AddPokémon() {
          name,
          type,
          attacks,
-         attackvalues,
          image,
          battleimage,
       }
       const res = await axios.post(URL, {fields}, config)
       console.log(res.data)
-      history.push('/pokemon')
+      history.push('/pokemonlists')
    }
 
    return (
-      <div>
+      <div className='Add'>
+         <Link to='/'>
+            <h1>Poké Duel</h1>
+         </Link>
          <Form 
             name={name}
             setName={setName}
@@ -48,8 +51,6 @@ export default function AddPokémon() {
             setType={setType}
             attacks={attacks}
             setAttacks={setAttacks}
-            attackvalues={attackvalues}
-            setAttackValues={setAttackValues}
             image={image}
             setImage={setImage}
             battleimage={battleimage}

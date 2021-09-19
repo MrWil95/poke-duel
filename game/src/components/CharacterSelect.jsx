@@ -1,8 +1,7 @@
+import '../css/CharacterSelect.css'
 import {useEffect, useState} from 'react'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {fetchPokémon} from '../services'
-import AddPokémon from './AddPokémon'
-import EditPokemon from './EditPokemon'
 
 export default function CharacterSelect() {
    const [pokemonlists, setPokemonLists] = useState([])
@@ -16,24 +15,20 @@ export default function CharacterSelect() {
 
    }, [])
 
-
    return (
-      <div>
+      <div className='Character'>
+         <Link to='/'>
+            <h1>Poké Duel</h1>
+         </Link>
          {pokemonlists?.map((pokemonlist) => {
             return (
-               <div>
+               <div className='CharacterSelect'>
                   <Link to={`/pokemonlists/${pokemonlist.id}`} key={pokemonlist.id}>
-                     <img src={pokemonlist.fields.image} alt={pokemonlist.fields.name}/>
+                     <img src={pokemonlist.fields.image} alt={pokemonlist.fields.name} key={pokemonlist.image}/>
+                     <h2 key={pokemonlist.name}>{pokemonlist.fields.name} </h2>
+                     <h3 key={pokemonlist.type}>{pokemonlist.fields.type}</h3>
+                     <h3 key={pokemonlist.attacks}>{pokemonlist.fields.attacks} </h3>
                   </Link>
-                  <h2>{pokemonlist.fields.name}</h2>
-                  <h3>{pokemonlist.fields.type}</h3>
-                  <h3>{pokemonlist.fields.attacks}: {pokemonlist.fields.attackvalues}</h3>
-                  <Route to='/new'>
-                     <AddPokémon />
-                  </Route>
-                  <Route path='/pokemonlists/:id/edit'>
-                     <EditPokemon />
-                  </Route>
                </div>
             )
          })}

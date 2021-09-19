@@ -1,0 +1,23 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+.Character {
+   display: grid;
+   grid-template-rows: 8% 34% 34% 42%;
+}
+
+.Character h1 {
+   font-family: 'Pokemon Solid', sans-serif;
+}
+
+.CharacterSelect img {
+   width: 75vw;
+   margin: 0 2.5em;
+}
+
+.CharacterSelect h2, h3 {
+   font-family: 'Pokemon Solid', sans-serif;
+   letter-spacing: .2em;
+   color: black;
+   -webkit-text-stroke: black;
+   text-align: center;
+}

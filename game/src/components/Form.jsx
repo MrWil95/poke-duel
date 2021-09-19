@@ -1,3 +1,5 @@
+import '../css/Form.css'
+
 export default function Form(props) {
    const {name, setName,
          type, setType,

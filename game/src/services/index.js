@@ -13,12 +13,13 @@ const config = {
 
 export const fetchPokémon = async () => {
    const res = await axios.get(URL, config)
-   console.log(res.data.records) 
+   console.log(res.data.records)
+   return (res.data.records) 
 }
 
 export const fetchPokemon = async (id) => {
    const res = await axios.get(`${URL}/${id}`, config)
-   return res.data
+   return (res.data)
 }
 
 export const deletePokémon = async (id) => {

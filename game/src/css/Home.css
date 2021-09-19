@@ -1,6 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
 
 .Home {
+  overflow: hidden;
   text-align: center;
 }
 
