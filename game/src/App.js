@@ -1,6 +1,6 @@
-import './App.css'
+import './css/App.css'
 import Nav from './components/Nav'
-import CharacterSelect from './components/CharacterSelect'
+import Ruels from './components/Ruels'
 import {Route, Link} from 'react-router-dom'
 
 console.log(process.env.REACT_APP_AIRTABLE_KEY)
@@ -16,8 +16,8 @@ function App() {
       </div>
       <Nav />
       <Route exact path='/'></Route>
-      <Route exact path='/characterselect'>
-        <CharacterSelect />
+      <Route exact path='/ruels'>
+        <Ruels />
       </Route>
     </div>
   );

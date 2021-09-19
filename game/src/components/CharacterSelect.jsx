@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react'
 import {Route, Link} from 'react-router-dom'
 import {fetchPokémon} from '../services'
 import AddPokémon from './AddPokémon'
-import CharacterDetails from './CharacterDetails'
 import EditPokemon from './EditPokemon'
 
 export default function CharacterSelect() {
@@ -23,19 +22,17 @@ export default function CharacterSelect() {
          {pokemonlists?.map((pokemonlist) => {
             return (
                <div>
-                  <Link to={`/characterselect/${pokemonlist.id}`} key={pokemonlist.id}>
+                  <Link to={`/pokemonlists/${pokemonlist.id}`} key={pokemonlist.id}>
                      <img src={pokemonlist.fields.image} alt={pokemonlist.fields.name}/>
-                     <h2>{pokemonlist.fields.name}</h2>
-                     <h3>{pokemonlist.fields.type}</h3>
-                     <h3>{pokemonlist.fields.attacks}: {pokemonlist.fields.attackvalues}</h3>
                   </Link>
+                  <h2>{pokemonlist.fields.name}</h2>
+                  <h3>{pokemonlist.fields.type}</h3>
+                  <h3>{pokemonlist.fields.attacks}: {pokemonlist.fields.attackvalues}</h3>
+                  <Route exact path='/pokemonlists'></Route>
                   <Route to='/new'>
                      <AddPokémon />
                   </Route>
-                  <Route path='/characterselect/:id'>
-                     <CharacterDetails />
-                  </Route>
-                  <Route path='/characterselect/:id/edit'>
+                  <Route path='/pokemonlists/:id/edit'>
                      <EditPokemon />
                   </Route>
                </div>

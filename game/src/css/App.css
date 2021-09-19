@@ -5,7 +5,7 @@
 }
 
 .App-header {
-  background-image: url("https://i.imgur.com/AtkIXcu.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/AtkIXcu.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: -.5em;

@@ -2,7 +2,6 @@ export default function Form(props) {
    const {name, setName,
          type, setType,
          attacks, setAttacks,
-         attackvalues, setAttackValues,
          image, setImage,
          battleimage, setBattleImage, handleSubmit} = props
 
@@ -27,13 +26,6 @@ export default function Form(props) {
             type='text'
             value={attacks}
             onChange={(e) => setAttacks(e.target.value)}
-         />
-         <br />
-         <label>AttackValues</label>
-         <input 
-            type='number'
-            value={attackvalues}
-            onChange={(e) => setAttackValues(e.target.value)}
          />
          <br />
          <label>Image</label>

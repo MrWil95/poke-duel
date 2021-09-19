@@ -5,13 +5,13 @@
    align-items: flex-start;
    justify-content: center;
    width: 100vw;
-   height: 50vh;
+   height: 75vh;
    font-family: 'Pokemon Solid', sans-serif;
    margin-top: 2em;
 }
 
 .Nav ul {
-   margin-top: 2em;
+   margin-top: 3.5em;
    margin-right: 2.5em;
 }
 

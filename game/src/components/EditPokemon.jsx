@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { useHistory } from 'react-router'
 import axios from 'axios'
 import Form from './Form'
+import DeleteButton from './DeleteButton'
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY
@@ -18,7 +19,6 @@ export default function EditPokemon() {
    const [name, setName] = useState('')
    const [type, setType] = useState('')
    const [attacks, setAttacks] = useState('')
-   const [attackvalues, setAttackValues] = useState('')
    const [image, setImage] = useState ('')
    const [battleimage, setBattleImage] = useState('')
 
@@ -32,7 +32,6 @@ export default function EditPokemon() {
          setName(fields.name)
          setType(fields.type)
          setAttacks(fields.attacks)
-         setAttackValues(fields.attackvalues)
          setImage(fields.image)
          setBattleImage(fields.battleimage)
       }
@@ -46,7 +45,6 @@ export default function EditPokemon() {
             name,
             type,
             attacks,
-            attackvalues,
             image,
             battleimage,
       }
@@ -65,14 +63,13 @@ export default function EditPokemon() {
             setType={setType}
             attacks={attacks}
             setAttacks={setAttacks}
-            attackvalues={attackvalues}
-            setAttackValues={setAttackValues}
             image={image}
             setImage={setImage}
             battleimage={battleimage}
             setBattleImage={setBattleImage}
             handleSubmit={handleSubmit}
-         />     
+         />
+         <DeleteButton />   
       </div>
    )
 }
