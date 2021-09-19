@@ -1,0 +1,29 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+.Home {
+  text-align: center;
+}
+
+.Home-header {
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/AtkIXcu.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: -.5em;
+  margin: 1em;
+  display: grid;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Home-header h1 {
+  color: yellow;
+  font-family: 'Pokemon Solid', sans-serif;
+  -webkit-text-stroke: 4px blue;
+  font-size: 3.25em;
+}
+
+.Home-header a {
+  text-decoration: none;
+}
+
+

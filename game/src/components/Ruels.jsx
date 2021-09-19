@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import '../css/Ruels.css'
 
 export default function Ruels() {
@@ -7,6 +7,7 @@ export default function Ruels() {
          <Link to='/'>
             <h1>Poké Duel</h1>
          </Link>
+         <Route exact path='/ruels'></Route>
          <img src='https://i.imgur.com/eiqRS40.png' alt='original starter pokémon' />
          <p>Welcome to the game you all know and love made from React! Make your way to the character select page to see 
             our selection of players. Here you can select any character in our roster, or add one that we migt not have yet.

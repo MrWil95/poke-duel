@@ -28,7 +28,6 @@ export default function CharacterSelect() {
                   <h2>{pokemonlist.fields.name}</h2>
                   <h3>{pokemonlist.fields.type}</h3>
                   <h3>{pokemonlist.fields.attacks}: {pokemonlist.fields.attackvalues}</h3>
-                  <Route exact path='/pokemonlists'></Route>
                   <Route to='/new'>
                      <AddPokémon />
                   </Route>

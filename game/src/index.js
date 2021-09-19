@@ -2,15 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import CharacterSelect from './components/CharacterSelect';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'
 import {BrowserRouter as Router} from 'react-router-dom'
+import CharacterSelect from './components/CharacterSelect'
+import Ruels from './components/Ruels'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <App />
       <CharacterSelect />
+      <Ruels />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
