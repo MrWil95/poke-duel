@@ -1,7 +1,6 @@
 import '../css/AddPokemon.css'
 import {useState} from 'react'
-import {useHistory} from 'react-router'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Form from './Form'
 import axios from 'axios'
 
