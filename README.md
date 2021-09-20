@@ -16,7 +16,7 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 
 ## Wireframes
 
-![]()
+![wirframes](p2-wireframe.png)
 
 
 
@@ -24,12 +24,25 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 
 
 #### MVP 
-
+- Working, interactive React app, built using create react app.
+- Utilize React Router, installed via NPM: Done
+- Have at least 6 separate, rendered components: Done
+- Implement an organized and understandable React file structure: Done
+- Utilize functional components appropriately: In progress
+- Use Axios to consume data from Airtable, and GET/render that data in your components: Done
+- Use Axios to POST/create new data on Airtable: Done
+- Use only React for DOM Manipulation: Done
 
  
 
 #### PostMVP  
-
+- Get game functioning
+- Add working healthbar
+- Add clickable attacks
+- Implement damage counter
+- Save winner data
+- 
+- 
 
 
 ## Project Schedule
@@ -45,29 +58,28 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 |September 24th| Presentations | 
 
 ## Priority Matrix
-![]()
+![priority_matrix](p2-wireframe.png)
 
 
 
 ## Timeframes
 
-| Component         | Priority | Estimated Time | Time Invested | Actual Time |
-| ---               | :---:    | :---:          |  :---:        |:---:        |
-|HTML, CSS(layout)  | H        | 2hrs           | 1hr           | 1hr         |   
-|Working with API   | H        | 3hrs           | 3hrs          | 3hrs        |
-|Start game function| H        | 2hrs           | 1.5hrs        | 2hrs        |
-|Populate questions | H        | 2hrs           | 1hr           | 1hr         |
-|Get next question  | H        | 2hrs           | 3hrs          | 3hrs        |
-|Populate answers   | H        | 2hrs           | 4.5hrs        | 5hrs        |
-|Get next answers   | H        | 2hrs           | 5hrs          | 5hrs        |
-|Timer start        | H        | 2hrs           | 1hr           | 1hr         |
-|Timer restart      | H        | 2hrs           | 2.5hrs        | 3hrs        |
-|Scoring            | H        | 2hrs           | 1hr           | 1hr         |
-|End game function  | H        | 3hrs           | 2hrs          | 2hrs        |
-|Animation          | M        | 3hrs           | 1hr           | 1hr         |
-|PostMVP            | M        | 4hrs           | N/A           | N/A         |
-|Debugging          | H        | 4hrs           | 7hrs          | 8hrs        |
-|Total              | H        | 32hrs          | 33.5hrs       | 36hrs       |
+|Component                                     |Priority  |Time   |Time Invested  |Actual Time  |
+|:---:                                         |:---:     |:---:  |:---:          |:---:        |
+|Working with API                              | H        |       |               |             |
+|React layout                                  | H        |       |               |             |   
+|Functioning components                        | H        |       |               |             |
+|Interactive React app                         | H        |       |               |             |
+|Utilize React Router                          | H        |       |               |             |
+|6 components                                  | H        |       |               |             |
+|React file structure                          | H        |       |               |             | 
+|Utilize functional components appropriately   | H        |       |               |             |
+|Use Axios to GET/render data from Airtable    | H        |       |               |             |
+|Use Axios to POST/create new data on Airtable | H        |       |               |             |
+|Use only React for DOM Manipulation           | H        |       |               |             |
+|PostMVP                                       | M        |       |               |             |
+|Debugging                                     | H        |       |               |             |
+|Total                                         | H        |       |               |             |
 
 
 ## Code Snippet
