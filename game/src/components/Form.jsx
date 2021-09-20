@@ -44,7 +44,7 @@ export default function Form(props) {
             onChange={(e) => setBattleImage(e.target.value)}
          />
          <br />
-         <button type='submit'>Add Pokémon</button>
+         <button type='submit' disabled={!name || !type || !attacks || !image || !battleimage}>Add Pokémon</button>
       </form>
    )
 }

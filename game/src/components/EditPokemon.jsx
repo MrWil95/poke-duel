@@ -1,9 +1,9 @@
+import '../css/Edit.css'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { useHistory } from 'react-router'
 import axios from 'axios'
 import Form from './Form'
-import DeleteButton from './DeleteButton'
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY
@@ -55,7 +55,7 @@ export default function EditPokemon() {
    }
 
    return (
-      <div>
+      <div className='Edit'>
          <Form 
             name={name}
             setName={setName}
@@ -68,8 +68,7 @@ export default function EditPokemon() {
             battleimage={battleimage}
             setBattleImage={setBattleImage}
             handleSubmit={handleSubmit}
-         />
-         <DeleteButton />   
+         />  
       </div>
    )
 }
