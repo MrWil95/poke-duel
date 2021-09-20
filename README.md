@@ -28,7 +28,7 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 - Utilize React Router, installed via NPM: Done
 - Have at least 6 separate, rendered components: Done
 - Implement an organized and understandable React file structure: Done
-- Utilize functional components appropriately: In progress
+- Utilize functional components appropriately: Done
 - Use Axios to consume data from Airtable, and GET/render that data in your components: Done
 - Use Axios to POST/create new data on Airtable: Done
 - Use only React for DOM Manipulation: Done
@@ -37,12 +37,12 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 
 #### PostMVP  
 - Get game functioning
-- Add working healthbar
+- Generate random opponent
 - Add clickable attacks
 - Implement damage counter
-- Save winner data
-- 
-- 
+- Add working healthbar
+- Save player info if they win
+- Limit add form input
 
 
 ## Project Schedule
@@ -52,9 +52,9 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 |September 16th| Layout / Wireframes / Priority Matrix / Timeframes | Complete
 |September 17th| Project Approval | Complete
 |September 17th-18th| Core Application Structure (React layout) | Complete
-|September 19th| Pseudocode / actual code | 
-|September 20th| Initial Clickable Model  |
-|September 22nd| MVP | 
+|September 19th| Pseudocode / actual code | Complete
+|September 20th| Initial Clickable Model  | Complete
+|September 22nd| MVP | Complete
 |September 24th| Presentations | 
 
 ## Priority Matrix
@@ -66,20 +66,16 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 
 |Component                                     |Priority  |Time   |Time Invested  |Actual Time  |
 |:---:                                         |:---:     |:---:  |:---:          |:---:        |
-|Working with API                              | H        |       |               |             |
-|React layout                                  | H        |       |               |             |   
-|Functioning components                        | H        |       |               |             |
-|Interactive React app                         | H        |       |               |             |
-|Utilize React Router                          | H        |       |               |             |
-|6 components                                  | H        |       |               |             |
-|React file structure                          | H        |       |               |             | 
-|Utilize functional components appropriately   | H        |       |               |             |
-|Use Axios to GET/render data from Airtable    | H        |       |               |             |
-|Use Axios to POST/create new data on Airtable | H        |       |               |             |
-|Use only React for DOM Manipulation           | H        |       |               |             |
-|PostMVP                                       | M        |       |               |             |
-|Debugging                                     | H        |       |               |             |
-|Total                                         | H        |       |               |             |
+|Working with API                              | H        |1hr    |30min          |             |
+|React layout                                  | H        |1hr    |1hr            |             |   
+|Render data on page                           | H        |2hrs   |2hrs           |             |
+|Link rendered data  to more info              | H        |2hrs   |1.5hrs         |             |
+|Function delete button                        | H        |1hr    |1hr            |             |
+|Edit form                                     | H        |1hr    |1hr            |             |
+|Add data form                                 | H        |1hr    |1.5hrs         |             | 
+|PostMVP                                       | M        |15hrs  |               |             |
+|Debugging                                     | H        |23hrs  |hrs            |             |
+|Total                                         | H        |47hrs  |               |             |
 
 
 ## Code Snippet

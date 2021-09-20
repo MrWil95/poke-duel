@@ -25,7 +25,7 @@ export default function AddPokémon() {
    const history = useHistory()
 
    const handleSubmit = async (e) => {
-      e.preventDeafault()
+      e.preventDefault()
       const fields = {
          name,
          type,
