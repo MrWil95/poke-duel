@@ -1,1 +1,1 @@
-# Poke_Duel
+# poke-duel
