@@ -19,7 +19,7 @@ function App() {
       <Route exact path='/pokemonlists'>
           <CharacterSelect />
       </Route>
-      <Route path='/pokemonlistst/:id'>
+      <Route path='/pokemonlists/:id'>
           <CharacterDetails />
       </Route>
       <Route path='/new'>

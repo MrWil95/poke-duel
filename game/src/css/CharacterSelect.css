@@ -21,3 +21,13 @@
    -webkit-text-stroke: black;
    text-align: center;
 }
+
+.Buttons {
+   display: flex;
+   justify-content: center;
+}
+
+.Buttons a {
+   margin: 0 .5em;
+   letter-spacing: .05em;
+}

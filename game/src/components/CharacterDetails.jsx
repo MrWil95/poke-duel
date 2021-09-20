@@ -1,9 +1,10 @@
 import '../css/CharacterDetail.css'
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router'
-import { Link } from 'react-router-dom'
-import DeleteButton from './DeleteButton'
+// import { Link } from 'react-router-dom'
+// import DeleteButton from './DeleteButton'
 import { fetchPokemon } from '../services'
+// import Opponent from './Opponent'
 
 export default function CharacterDetails() {
    const [pokemonlist, setPokemonList] = useState({})
@@ -24,12 +25,10 @@ export default function CharacterDetails() {
 
    return (
       <div className='Details'>
-         <img src={pokemonlist.fields?.battleimage} alt={pokemonlist.fields?.name}/>
-         <h2>{pokemonlist.fields?.name}</h2>
          <h3>{pokemonlist.fields?.type}</h3>
-         <h3>{pokemonlist.fields?.attacks}</h3>
-         <Link to={`/pokemonlists/${pokemonlist.id}/edit`}>Edit</Link>
-         <DeleteButton id={pokemonlist.id} />
+         <h4>{pokemonlist.fields?.attacks}</h4>
+         <img src={pokemonlist.fields?.battleimage} alt={pokemonlist.fields?.name}/>
+         {/* <Opponent /> */}
       </div>
    )
 }

@@ -1,0 +1,31 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+.Details {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 50% 50%;
+   width: 100vw;
+   height: 100vh;
+   grid-column: 2 / 2;
+   grid-row: 3 / 2;
+   font-family: 'Pokemon Solid', sans-serif;
+}
+
+.Details img {
+   width: 35vw;
+   margin: 7em 2.5em 0 1.6em;
+}
+
+.Details h3, h4 {
+   position: relative;
+   top: 25em;
+}
+
+.Details h3 {
+   margin-top: 3em;
+}
+
+.Details h4 {
+   letter-spacing: .1em;
+   margin-top: 5em;
+}
