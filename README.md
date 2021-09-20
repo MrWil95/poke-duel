@@ -16,7 +16,7 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 
 ## Wireframes
 
-![wirframes](p2-wireframe.png)
+![wirframes](https://i.imgur.com/O7uobLK.png)
 
 
 
@@ -58,7 +58,7 @@ I'll be recreating/revamping the clasic hand-held game we all know and love, Pok
 |September 24th| Presentations | 
 
 ## Priority Matrix
-![priority_matrix](p2-wireframe.png)
+![priority_matrix](https://i.imgur.com/O7uobLK.png)
 
 
 
