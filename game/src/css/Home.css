@@ -1,5 +1,3 @@
-@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
-
 .Home {
   overflow: hidden;
   text-align: center;
@@ -18,8 +16,7 @@
 
 .Home-header h1 {
   color: yellow;
-  font-family: 'Pokemon Solid', sans-serif;
-  -webkit-text-stroke: 4px blue;
+  -webkit-text-stroke: 2px blue;
   font-size: 3.25em;
 }
 

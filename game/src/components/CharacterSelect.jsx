@@ -32,7 +32,7 @@ export default function CharacterSelect() {
                      <h3 key={pokemonlist.attacks}>{pokemonlist.fields.attacks}</h3>
                   </Link>
                   <div className='Buttons'>
-                     <Link to={`/pokemonlists/${pokemonlist.id}/edit`} className='Edit'>Edit</Link>
+                     <Link to={`/pokemonlists/${pokemonlist.id}/edit`}>Edit</Link>
                      <DeleteButton id={pokemonlist.id} />
                   </div>
                </div>

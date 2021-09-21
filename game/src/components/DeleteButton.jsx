@@ -1,3 +1,4 @@
+import '../css/Delete.css'
 import { useHistory } from 'react-router-dom'
 import { deletePokémon } from '../services'
 
@@ -9,6 +10,6 @@ export default function DeleteButton(props) {
    }
 
    return (
-      <button onClick={handleDelete}>Delete</button>
+      <button className='Delete' onClick={handleDelete}>Delete</button>
    )
 }
