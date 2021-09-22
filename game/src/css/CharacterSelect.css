@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
 
+a {
+   text-decoration: none;
+   color: black;
+   text-align: center;
+}
+
 .Character {
    display: grid;
-   grid-template-rows: 8% 34% 34% 42%;
+   grid-template-rows: auto;
    font-family: 'Boogaloo', cursive;
 }
 
-.Character a {
-   text-decoration: none;
+.Character h1 {
    color: yellow;
    -webkit-text-stroke: 1.5px blue;
-   text-align: center;
-   font-size: 1.50em;
+   font-size: 2.5em;
 }
 
 
@@ -21,11 +25,8 @@
 }
 
 .CharacterSelect h2, h3 {
-   font-family: 'Pokemon Solid', sans-serif;
    letter-spacing: .2em;
-   color: black;
-   -webkit-text-stroke: black;
-   text-align: center;
+   padding: 0 .5em;
 }
 
 .Buttons {
@@ -34,8 +35,12 @@
    align-items: center; 
 }
 
-.Buttons a {
+.Buttons h5 {
+   color: yellow;
+   -webkit-text-stroke: 1px blue;
+   font-size: 1.2em;
    padding: 0 .5em;
    letter-spacing: .05em;
-   margin-left: 1em;
+   margin-left: 5.5em;
 }
+

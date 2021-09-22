@@ -55,6 +55,7 @@ export default function AddPokémon() {
             battleimage={battleimage}
             setBattleImage={setBattleImage}
             handleSubmit={handleSubmit}
+            label={'Add'}
          />
       </div>
    )

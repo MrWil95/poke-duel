@@ -5,7 +5,7 @@ export default function Form(props) {
          type, setType,
          attacks, setAttacks,
          image, setImage,
-         battleimage, setBattleImage, handleSubmit} = props
+         battleimage, setBattleImage, handleSubmit, label} = props
 
    return (
       <form onSubmit={handleSubmit}>
@@ -44,7 +44,7 @@ export default function Form(props) {
             onChange={(e) => setBattleImage(e.target.value)}
          />
          <br />
-         <button type='submit' disabled={!name || !type || !attacks || !image || !battleimage}>Add Pokémon</button>
+         <button type='submit'  disabled={!name || !type || !attacks || !image || !battleimage}>{label} Pokémon</button>
       </form>
    )
 }

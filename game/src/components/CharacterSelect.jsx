@@ -6,7 +6,6 @@ import DeleteButton from './DeleteButton'
 
 export default function CharacterSelect() {
    const [pokemonlists, setPokemonLists] = useState([])
-   // const {handleClick} = props
 
 
    useEffect(() => {
@@ -25,14 +24,14 @@ export default function CharacterSelect() {
          {pokemonlists?.map((pokemonlist) => {
             return (
                <div className='CharacterSelect'>
-                  <Link to={`/pokemonlists/${pokemonlist.id}`} key={pokemonlist.id}> {/*onClick={handleClick}*/}
+                  <Link to={`/pokemonlists/${pokemonlist.id}`} key={pokemonlist.id}>
                      <img src={pokemonlist.fields.image} alt={pokemonlist.fields.name} key={pokemonlist.image}/>
                      <h2 key={pokemonlist.name}>{pokemonlist.fields.name} </h2>
                      <h3 key={pokemonlist.type}>{pokemonlist.fields.type}</h3>
                      <h3 key={pokemonlist.attacks}>{pokemonlist.fields.attacks}</h3>
                   </Link>
                   <div className='Buttons'>
-                     <Link to={`/pokemonlists/${pokemonlist.id}/edit`}>Edit</Link>
+                     <Link to={`/pokemonlists/${pokemonlist.id}/edit`}><h5>Edit</h5></Link>
                      <DeleteButton id={pokemonlist.id} />
                   </div>
                </div>
@@ -41,17 +40,4 @@ export default function CharacterSelect() {
          
       </div>
    )
-}
-
-//  <ScrollMenu
-//             LeftArrow={LeftArrow}
-//             rightArrow={RightArrow} 
-//          >
-//             {pokemon.map(({pokemon}) => {
-//                <Card 
-//                   pokemon={pokemon}
-
-//                />
-//             })}
-         
-//          </ScrollMenu>  
+} 

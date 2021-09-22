@@ -1,13 +1,15 @@
 .Home {
-  overflow: hidden;
   text-align: center;
+  /* opacity: 0; */
+  /* animation: appear 1s ease 5s forwards; */
 }
 
 .Home-header {
   background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/AtkIXcu.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-y: -.5em;
+  background-size: cover;
+  background-position-y: 2vmin;
+  height: 30vh;
   margin: 1em;
   display: grid;
   font-size: calc(10px + 2vmin);
@@ -23,5 +25,27 @@
 .Home-header a {
   text-decoration: none;
 }
+
+/* @keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+/* @media (min-width: 320px) {
+  .Home-header {
+    height: 28vh;
+  }
+} */
+
+
+
+
+
+
+
 
 

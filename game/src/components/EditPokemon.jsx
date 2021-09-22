@@ -2,7 +2,6 @@ import '../css/Edit.css'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { useHistory } from 'react-router-dom'
-import DeleteButton from './DeleteButton'
 import axios from 'axios'
 import Form from './Form'
 
@@ -69,6 +68,7 @@ export default function EditPokemon() {
             battleimage={battleimage}
             setBattleImage={setBattleImage}
             handleSubmit={handleSubmit}
+            label={'Edit'}
          />
       </div>
    )

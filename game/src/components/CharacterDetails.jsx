@@ -1,12 +1,11 @@
 import '../css/CharacterDetail.css'
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router'
-// import { Link } from 'react-router-dom'
-// import DeleteButton from './DeleteButton'
 import { fetchPokemon } from '../services'
 // import Opponent from './Opponent'
 
 export default function CharacterDetails() {
+   const [pokemonlists, setPokemonLists] = useState([])
    const [pokemonlist, setPokemonList] = useState({})
    const [loading, setLoading] = useState(true)
    const {id} = useParams()
@@ -16,7 +15,10 @@ export default function CharacterDetails() {
          setPokemonList(await fetchPokemon(id))
          setLoading(false)
       }
-      getPokemon()
+      getPokemon(pokemonlists.length)
+      const pokemonlist = setPokemonLists[Math.floor(Math.random() * pokemonlists.length)]
+      setPokemonList(pokemonlist)
+
    }, [id])
 
    if (loading) {
