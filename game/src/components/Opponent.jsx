@@ -1,47 +1,37 @@
-// import { useState, useEffect } from 'react'
-// import {useParams} from 'react-router'
-// import { fetchPokemon } from '../services'
+import '../css/Opponent.css'
+import { useState, useEffect } from 'react'
+import { fetchAllPokemon } from '../services'
+import OpponentHealthbar from './OpponentHealthbar'
 
-// export default function Opponent() {
-//    const [pokemonlists, setPokemonLists] = useState([])
-//    const [pokemonlist, setPokemonList] = useState('')
-//    const [loading, setLoading] = useState(true)
-//    const {id} = useParams()
+export default function Opponent() {
+   const [loading, setLoading] = useState(true)
+   const [opponent, setOpponent] = useState({})
 
-//    useEffect(() => {
-//       const getPokemon = async () => {
-//          setPokemonLists(await fetchPokemon(id))
-//          setLoading(false)
-//       }
-//       getPokemon()
-//    }, [id])
-
+   useEffect(() => {
+      const getOnePokemon = async () => {
+         const allPokemon = await fetchAllPokemon()
+         const pokemon = allPokemon[Math.floor(Math.random() * allPokemon.length)]
+         console.log(allPokemon)
+         console.log(pokemon)
+         setOpponent(pokemon)
+         setLoading(false)
+      }
+      getOnePokemon()
       
-//    const randomOpponent = () => {
-//       const pokemonlist = setPokemonLists[Math.floor(Math.random() * pokemonlists.length)]
-//       setPokemonList(pokemonlist)
-//    }
-//    randomOpponent()
+   }, [])
 
-//    if (loading) {
-//       return <div>Loading...</div>
-//    }
+   if (loading) {
+      return <div>Loading...</div>
+   }
    
-//    return (
-//       <div>
-//          <img src={pokemonlist.fields?.image} alt={pokemonlist.fields.name} key={pokemonlist.image}/>
-//          <h2>{pokemonlist.fields?.name} </h2>
-//          <h3>{pokemonlist.fields?.type}</h3>
-//          <h3>{pokemonlist.fields?.attacks}</h3>
-//       </div>
-//    )
+   return (
+      <div className='Opponent'>
+         <img className='Image' src={opponent.fields?.image} alt={opponent.fields.name} key={opponent.image}/>
+         <h2>{opponent.fields?.name}</h2>
+         <h3>{opponent.fields?.type}</h3>
+         <h3>{opponent.fields?.attacks}</h3>
+         <OpponentHealthbar />
+      </div>
+   )
          
-// }
-// const history = useHistory
-
-   // const handleClick = (e) => {
-   //    e.preventDefault()
-   //    const randomOpponent = pokemonlists[Math.floor(Math.random() * pokemonlists.length)]
-   //    setPokemonList(randomOpponent)
-   //    history.push(`/pokemonlists/${pokemonlist.id}`)
-   // }
+}

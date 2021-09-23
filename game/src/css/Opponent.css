@@ -1,0 +1,21 @@
+.Opponent {
+   width: 100vw;
+   height: 50vh;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 50% 50%;
+}
+
+.Image {
+   grid-column: 2 / 2;
+   grid-row: 1 / 2;
+   top: -20em;
+   margin-left: 1em;
+   width: 35vw;
+}
+
+.OpponentHealthbar {
+   grid-column: 2 / 2;
+   grid-row: 1 / 2;
+   margin-left: 5em;
+}

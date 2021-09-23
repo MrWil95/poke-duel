@@ -1,7 +1,7 @@
 import '../css/CharacterSelect.css'
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-import {fetchPokémon} from '../services'
+import {fetchAllPokemon} from '../services'
 import DeleteButton from './DeleteButton'
 
 export default function CharacterSelect() {
@@ -9,10 +9,10 @@ export default function CharacterSelect() {
 
 
    useEffect(() => {
-      const getPokémon = async () => {
-         setPokemonLists(await fetchPokémon())
+      const getAllPokemon = async () => {
+         setPokemonLists(await fetchAllPokemon())
       }
-      getPokémon()
+      getAllPokemon()
 
    }, [])
 
@@ -28,7 +28,6 @@ export default function CharacterSelect() {
                      <img src={pokemonlist.fields.image} alt={pokemonlist.fields.name} key={pokemonlist.image}/>
                      <h2 key={pokemonlist.name}>{pokemonlist.fields.name} </h2>
                      <h3 key={pokemonlist.type}>{pokemonlist.fields.type}</h3>
-                     <h3 key={pokemonlist.attacks}>{pokemonlist.fields.attacks}</h3>
                   </Link>
                   <div className='Buttons'>
                      <Link to={`/pokemonlists/${pokemonlist.id}/edit`}><h5>Edit</h5></Link>

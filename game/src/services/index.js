@@ -11,13 +11,13 @@ const config = {
    },
 }
 
-export const fetchPokémon = async () => {
+export const fetchAllPokemon = async () => {
    const res = await axios.get(URL, config)
    console.log(res.data.records)
    return (res.data.records) 
 }
 
-export const fetchPokemon = async (id) => {
+export const fetchOnePokemon = async (id) => {
    const res = await axios.get(`${URL}/${id}`, config)
    return (res.data)
 }
