@@ -1,11 +1,12 @@
 import PlayerTraits from './PlayerTraits'
+import Opponent from './Opponent'
 import {useState} from 'react'
    
 export default function Health() {
    const [healthbar, setHealthBar] = useState(0)
    const [dealdamage, setDealDamage] = useState(0)
    
-   const setPlayerHealth = () => {
+   const opponentsHealth = () => {
       let health = 100
       setHealthBar(health)
    }
@@ -21,9 +22,15 @@ export default function Health() {
 
    return (
       <div>
-         <PlayerTraits 
-            dealtDamage={dealtDamage} 
-            setPlayerHealth={setPlayerHealth}  
+         <PlayerTraits
+            dealdamage={dealdamage} 
+            setDealDamage={setDealDamage}
+            dealtDamage={dealtDamage}  
+         />
+         <Opponent
+            healthbar={healthbar} 
+            setHealthBar={setHealthBar}
+            opponentsHealth={opponentsHealth}
          />
       </div>
    )

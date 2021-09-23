@@ -1,17 +1,16 @@
 import '../css/OpponentHealthbar.css'
-import { useState} from 'react'
+// import { useState } from 'react'
 
 
-export default function OpponentHealthbar() {
-   const [healthbar, setHealthBar] = useState(0)
-
-   const setOpponentHealth = () => {
-      let health = 100
-      setHealthBar(health)
-   }
+export default function OpponentHealthbar(props) {
+   const {dealdamage,
+         setDealDamage, 
+         opponentsHealth} = props
+   // console.log(props)
+   
 
    
    return (
-      <div className='OpponentHealthbar'></div>
+      <div className='OpponentHealthbar' opponentsHealth={opponentsHealth}></div>
    )
 }

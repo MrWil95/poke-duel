@@ -3,9 +3,13 @@ import { useState, useEffect } from 'react'
 import { fetchAllPokemon } from '../services'
 import OpponentHealthbar from './OpponentHealthbar'
 
-export default function Opponent() {
+export default function Opponent(props) {
    const [loading, setLoading] = useState(true)
    const [opponent, setOpponent] = useState({})
+   const {healthbar,
+      setHealthBar, 
+      opponentsHealth} = props
+      console.log(props)
 
    useEffect(() => {
       const getOnePokemon = async () => {
@@ -30,7 +34,11 @@ export default function Opponent() {
          <h2>{opponent.fields?.name}</h2>
          <h3>{opponent.fields?.type}</h3>
          <h3>{opponent.fields?.attacks}</h3>
-         <OpponentHealthbar />
+         <OpponentHealthbar
+            healthbar={healthbar}
+            setHealthBar={setHealthBar}
+            opponentsHealth={opponentsHealth}
+         />
       </div>
    )
          
