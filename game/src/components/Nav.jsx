@@ -5,7 +5,7 @@ export default function Nav() {
    return (
       <div className='Nav'>
          <ul>
-            <li><Link to='/pokemonlists'><button>Start</button></Link></li>
+            <li><Link to='/allpokemon'><button>Start</button></Link></li>
             <br />
             <li><Link to='/new'><button>Add Pokémon</button></Link></li>
             <br />

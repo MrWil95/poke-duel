@@ -3,12 +3,11 @@ import '../css/Healthbar.css'
 
 
 
-export default function Healthbar() {
+export default function Healthbar(props) {
 
    return (
-      <div 
-         className='Healthbar'
-      >
+      <div className='Healthbar'>
+         <div className='InnerHealthbar'></div>
       </div>
    )
 }

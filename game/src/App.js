@@ -3,8 +3,9 @@ import Home from './components/Home'
 import Ruels from './components/Ruels'
 import CharacterSelect from './components/CharacterSelect'
 import CharacterDetails from './components/CharacterDetails'
-import AddPokémon from './components/AddPokémon'
+import AddOnePokemon from './components/AddOnePokemon'
 import EditPokemon from './components/EditPokemon'
+import WinnerInfo from './components/WinnerInfo'
 import {Route} from 'react-router-dom'
 
 console.log(process.env.REACT_APP_AIRTABLE_KEY)
@@ -16,20 +17,23 @@ function App() {
       <Route exact path='/'>
         <Home />
       </Route>
-      <Route exact path='/pokemonlists'>
+      <Route exact path='/allpokemon'>
           <CharacterSelect />
       </Route>
-      <Route path='/pokemonlists/:id'>
+      <Route path='/allpokemon/:id'>
           <CharacterDetails />
       </Route>
       <Route path='/new'>
-          <AddPokémon />
+          <AddOnePokemon />
       </Route>
-      <Route path='/pokemonlists/:id/edit'>
+      <Route path='/allpokemon/:id/edit'>
           <EditPokemon />
       </Route>
       <Route exact path='/ruels'>
         <Ruels />
+      </Route>
+      <Route exact path='/winnerinfo'>
+        <WinnerInfo />
       </Route>
     </div>
   );

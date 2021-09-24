@@ -14,7 +14,7 @@ export default function AddPokémon() {
 
    const airtableBase = process.env.REACT_APP_AIRTABLE_BASE
    const airtableKey = process.env.REACT_APP_AIRTABLE_KEY
-   const URL = `https://api.airtable.com/v0/${airtableBase}/Pokemonlists`
+   const URL = `https://api.airtable.com/v0/${airtableBase}/AllPokemon`
 
    const config = {
       headers: {
@@ -34,8 +34,8 @@ export default function AddPokémon() {
          battleimage,
       }
       const res = await axios.post(URL, {fields}, config)
+      history.push('/allpokemon')
       console.log(res.data)
-      history.push('/pokemonlists')
    }
 
    return (

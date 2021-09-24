@@ -5,15 +5,17 @@ import {useEffect, useState} from 'react'
 import {useParams} from 'react-router'
 import { fetchOnePokemon } from '../services'
 
-export default function PlayerTraits(props) {
-   const [pokemonlist, setPokemonList] = useState({})
+export default function PlayerConsole(props) {
+   const [currentpokemon, setCurrentPokemon] = useState({})
    const [loading, setLoading] = useState(true)
+   const [health, setHealth] = useState(100)
    const {id} = useParams()
    const {dealtDamage} = props
+   console.log(props)
    
    useEffect(() => {
       const getCurrentPokemon = async () => {
-         setPokemonList(await fetchOnePokemon(id))
+         setCurrentPokemon(await fetchOnePokemon(id))
          setLoading(false)
       }
       getCurrentPokemon()
@@ -27,8 +29,8 @@ export default function PlayerTraits(props) {
    return (
       <div className='PlayerTraits'>
          <Healthbar />
-         <h3>{pokemonlist.fields.name}</h3>
-         <h4>{pokemonlist.fields.type}</h4>
+         <h3>{currentpokemon.fields.name}</h3>
+         <h4>{currentpokemon.fields.type}</h4>
          <Attacks dealtDamage={dealtDamage} />
       </div>
    )

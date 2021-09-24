@@ -1,8 +1,14 @@
 .OpponentHealthbar {
-   background-color: green;
    border: 4px solid black;
-   border-radius: 30px;
+   border-radius: 20px;
    width: 40vw;
-   height: 1.5em;
+   height: 1em;
    margin: 1.5em;
+}
+
+.InnerHealth {
+   background-color: green;
+   border-radius: 20px;
+   width: 100%;
+   height: 1em;
 }

@@ -3,14 +3,14 @@ import '../css/OpponentHealthbar.css'
 
 
 export default function OpponentHealthbar(props) {
-   const {dealdamage,
-         setDealDamage, 
-         opponentsHealth} = props
+   const {healthbar} = props
    // console.log(props)
    
 
    
    return (
-      <div className='OpponentHealthbar' opponentsHealth={opponentsHealth}></div>
+      <div className='OpponentHealthbar' >
+         <div style={{width: `${healthbar}%`}} className='InnerHealth'></div>
+      </div>
    )
 }

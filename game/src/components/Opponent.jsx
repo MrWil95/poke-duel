@@ -1,28 +1,33 @@
 import '../css/Opponent.css'
 import { useState, useEffect } from 'react'
+import { Redirect } from 'react-router'
 import { fetchAllPokemon } from '../services'
 import OpponentHealthbar from './OpponentHealthbar'
+import CharacterDetails from './CharacterDetails'
 
 export default function Opponent(props) {
    const [loading, setLoading] = useState(true)
    const [opponent, setOpponent] = useState({})
-   const {healthbar,
-      setHealthBar, 
-      opponentsHealth} = props
+   const [health, setHealth] = useState(100)
+   const {healthbar, damage} = props
       console.log(props)
 
    useEffect(() => {
       const getOnePokemon = async () => {
          const allPokemon = await fetchAllPokemon()
          const pokemon = allPokemon[Math.floor(Math.random() * allPokemon.length)]
-         console.log(allPokemon)
-         console.log(pokemon)
          setOpponent(pokemon)
          setLoading(false)
       }
       getOnePokemon()
       
+      console.log(health)
    }, [])
+
+   useEffect(() => {
+      setHealth(prevHealth => prevHealth - damage)
+      {health < 0 ? <Redirect to='/winnerinfo' /> : <CharacterDetails />}
+   }, [damage])
 
    if (loading) {
       return <div>Loading...</div>
@@ -36,8 +41,6 @@ export default function Opponent(props) {
          <h3>{opponent.fields?.attacks}</h3>
          <OpponentHealthbar
             healthbar={healthbar}
-            setHealthBar={setHealthBar}
-            opponentsHealth={opponentsHealth}
          />
       </div>
    )

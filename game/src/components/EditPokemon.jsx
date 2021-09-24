@@ -7,7 +7,7 @@ import Form from './Form'
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY
-const URL = `https://api.airtable.com/v0/${airtableBase}/Pokemonlists`
+const URL = `https://api.airtable.com/v0/${airtableBase}/AllPokemon`
 
 const config = {
    headers: {
@@ -51,7 +51,7 @@ export default function EditPokemon() {
 
       const res = await axios.put(`${URL}/${id}`, {fields}, config)
       console.log(res.data)
-      history.push('/pokemonlists')
+      history.push('/allpokemon')
    }
 
    return (

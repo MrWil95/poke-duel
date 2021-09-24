@@ -9,7 +9,7 @@
 .Image {
    grid-column: 2 / 2;
    grid-row: 1 / 2;
-   top: -20em;
+   top: 20em;
    margin-left: 1em;
    width: 35vw;
 }
