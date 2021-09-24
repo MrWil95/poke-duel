@@ -8,7 +8,7 @@ import { fetchOnePokemon } from '../services'
 export default function PlayerConsole(props) {
    const [currentpokemon, setCurrentPokemon] = useState({})
    const [loading, setLoading] = useState(true)
-   const [health, setHealth] = useState(100)
+   // const [health, setHealth] = useState(100)
    const {id} = useParams()
    const {dealtDamage} = props
    console.log(props)

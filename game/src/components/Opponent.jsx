@@ -1,15 +1,14 @@
 import '../css/Opponent.css'
 import { useState, useEffect } from 'react'
-import { Redirect } from 'react-router'
+// import { Redirect } from 'react-router'
 import { fetchAllPokemon } from '../services'
 import OpponentHealthbar from './OpponentHealthbar'
-import CharacterDetails from './CharacterDetails'
 
 export default function Opponent(props) {
    const [loading, setLoading] = useState(true)
    const [opponent, setOpponent] = useState({})
    const [health, setHealth] = useState(100)
-   const {healthbar, damage} = props
+   const {damage} = props
       console.log(props)
 
    useEffect(() => {
@@ -22,11 +21,11 @@ export default function Opponent(props) {
       getOnePokemon()
       
       console.log(health)
-   }, [])
+   }, [health])
 
    useEffect(() => {
       setHealth(prevHealth => prevHealth - damage)
-      {health < 0 ? <Redirect to='/winnerinfo' /> : <CharacterDetails />}
+      
    }, [damage])
 
    if (loading) {
@@ -36,11 +35,13 @@ export default function Opponent(props) {
    return (
       <div className='Opponent'>
          <img className='Image' src={opponent.fields?.image} alt={opponent.fields.name} key={opponent.image}/>
-         <h2>{opponent.fields?.name}</h2>
-         <h3>{opponent.fields?.type}</h3>
-         <h3>{opponent.fields?.attacks}</h3>
+         <div className='elements'>
+            <h3>{opponent.fields?.name}</h3>
+            <h4>{opponent.fields?.type}</h4>
+            <h5>{opponent.fields?.attacks}</h5>
+         </div>
          <OpponentHealthbar
-            healthbar={healthbar}
+            health={health}
          />
       </div>
    )
