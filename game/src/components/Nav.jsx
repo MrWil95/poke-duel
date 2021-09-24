@@ -1,34 +1,7 @@
 import {Link} from 'react-router-dom'
-// import { useState } from 'react'
 import '../css/Nav.css'
 
 export default function Nav() {
-   // const [togglepokedex, setTogglePokeDex] = useState(true) 
-   // const images= {
-   //    closed: 'https://i.imgur.com/i7RJlYC.png',
-   //    open: 'https://i.imgur.com/bJfk5uO.png'
-   //  }
-
-   //    const toggleImage = () => {
-   //      setTogglePokeDex(togglepokedex => ({ togglepokedex: !togglepokedex }))
-   //    }
-    
-   //    const getImageName = () => {
-   //       {togglepokedex ? 'closed' : 'open'}
-   //    }
-
-   //    const setImage = getImageName()
-   
-   // let image
-
-   // const toggleImage = () => {
-   //    if(togglepokedex) {
-   //       image = 'https://i.imgur.com/i7RJlYC.png'
-   //    } else {
-   //       image = 'https://i.imgur.com/bJfk5uO.png'
-   //    }
-   // }
-
    function toggleImage(e) {
       e.target.setAttribute( 'src', 'https://i.imgur.com/bJfk5uO.png');
       e.target.setAttribute('alt', 'openpokedex');
