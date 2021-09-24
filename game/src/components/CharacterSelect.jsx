@@ -39,18 +39,19 @@ export default function CharacterSelect() {
          <FaArrowAltCircleRight className='right-arrow' onClick={nextImage}/>
             {allpokemon?.map((currentpokemon, index) => {
                return (
-                  <div className={index === currentimage ? 'characterSlide' : 'CharacterSelect'} key={index}>
+                  <div className={index === currentimage ? 'character-slide' : 'character-select'} key={index}>
                      {index === currentimage && (
-                     <div><div className='Buttons'>
-                        <Link to={`/allpokemon/${currentpokemon.id}/edit`}><h5>Edit</h5></Link>
-                        <DeleteButton id={currentpokemon.id} />
-                     </div>
-                     <Link to={`/allpokemon/${currentpokemon.id}`}>
-                        <h2>{currentpokemon.fields.name}</h2>
-                        <h3>{currentpokemon.fields.type}</h3>
-                        <img src={currentpokemon.fields.image} alt={currentpokemon.fields.name} className='CurrentPlayer' />
-                     </Link></div>)}
-                     
+                     <div className='character-info'>
+                        <div className='buttons'>
+                           <Link to={`/allpokemon/${currentpokemon.id}/edit`}><h5>Edit</h5></Link>
+                           <DeleteButton id={currentpokemon.id} />
+                        </div>
+                        <Link to={`/allpokemon/${currentpokemon.id}`}>
+                           <h2>{currentpokemon.fields.name}</h2>
+                           <h3>{currentpokemon.fields.type}</h3>
+                           <img src={currentpokemon.fields.image} alt={currentpokemon.fields.name} className='player' />
+                        </Link>
+                     </div>)}
                   </div>
                )
             })}
