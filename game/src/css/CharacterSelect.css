@@ -7,9 +7,15 @@ a {
 }
 
 .Character {
+   background-image: url('https://i.imgur.com/vlUrtdo.jpg');
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: -5em;
+   background-size: 800%;
    display: grid;
    grid-template-rows: auto;
    font-family: 'Boogaloo', cursive;
+   right: 2em;
 }
 
 .Character h1 {
@@ -18,10 +24,15 @@ a {
    font-size: 2.5em;
 }
 
+.CharacterSelect {
+   display: grid;
+   grid-template-rows: auto;
+}
 
-.CharacterSelect img {
-   width: 75vw;
-   margin: 0 2.5em;
+.CurrentPlayer {
+   width: 55vw;
+   margin-right: 2em;
+
 }
 
 .CharacterSelect h2, h3 {
