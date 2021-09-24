@@ -11,7 +11,7 @@ a {
    background-repeat: no-repeat;
    background-position-x: center;
    background-position-y: -5em;
-   background-size: 800%;
+   background-size: 700%;
    display: grid;
    grid-template-rows: auto;
    font-family: 'Boogaloo', cursive;
@@ -53,5 +53,19 @@ a {
    padding: 0 .5em;
    letter-spacing: .05em;
    margin-left: 5.5em;
+}
+
+.left-arrow, .right-arrow {
+   position: absolute;
+   top: 10em;
+   font-size: 2em;
+}
+
+.left-arrow {
+   left: 25px;
+}
+
+.right-arrow {
+   right: 25px;
 }
 

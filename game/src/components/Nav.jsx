@@ -10,11 +10,14 @@ export default function Nav() {
    return (
       <div className='Nav'>
          <ul>
-            <li><Link to='/allpokemon'><img src='https://i.imgur.com/3YsRPC8.png' alt='pokeball' className='Icons'/></Link></li>
+            <li><Link to='/allpokemon' className='wobble'><img src='https://i.imgur.com/3YsRPC8.png' alt='pokeball' className='Icons' /></Link></li>
+            <label className='Label'>Start</label>
             <br />
-            <li><Link to='/new'><img src='https://i.imgur.com/i7RJlYC.png' alt='pokedex' className='Icons' onClick={toggleImage}/> </Link></li>
+            <li><Link to='/new'><img src='https://i.imgur.com/i7RJlYC.png' alt='pokedex' className='Icons' onClick={toggleImage} /></Link></li>
+            <label className='Label'>Add to Pokedex</label>
             <br />
-            <li><Link to='/ruels'><button>Ruels</button></Link></li>
+            <li><Link to='/rules'><img src='https://i.imgur.com/q2gMJ01.png' alt='rules' className='Icons' /></Link></li>
+            <label className='Label'>Rules</label>
          </ul>
       </div>
    )

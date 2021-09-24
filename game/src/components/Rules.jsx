@@ -1,9 +1,9 @@
 import {Link} from 'react-router-dom'
-import '../css/Ruels.css'
+import '../css/Rules.css'
 
-export default function Ruels() {
+export default function Rules() {
    return (
-      <div className='Ruels'>
+      <div className='Rules'>
          <Link to='/'>
             <h1>Poké Duel</h1>
          </Link>

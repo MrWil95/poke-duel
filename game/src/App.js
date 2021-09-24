@@ -1,6 +1,6 @@
 import './css/App.css'
 import Home from './components/Home'
-import Ruels from './components/Ruels'
+import Rules from './components/Rules'
 import CharacterSelect from './components/CharacterSelect'
 import CharacterDetails from './components/CharacterDetails'
 import AddOnePokemon from './components/AddOnePokemon'
@@ -29,8 +29,8 @@ function App() {
       <Route path='/allpokemon/:id/edit'>
           <EditPokemon />
       </Route>
-      <Route exact path='/ruels'>
-        <Ruels />
+      <Route exact path='/rules'>
+        <Rules />
       </Route>
       <Route exact path='/winnerinfo'>
         <WinnerInfo />
