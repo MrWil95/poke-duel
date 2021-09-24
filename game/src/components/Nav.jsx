@@ -32,9 +32,9 @@ export default function Nav() {
    return (
       <div className='Nav'>
          <ul>
-            <li><Link to='/allpokemon'><button>Start</button></Link></li>
+            <li><Link to='/allpokemon'><img src='https://i.imgur.com/3YsRPC8.png' alt='pokeball' className='Icons'/></Link></li>
             <br />
-            <li><Link to='/new'><img src='https://i.imgur.com/i7RJlYC.png' alt='pokedex' /> </Link></li>
+            <li><Link to='/new'><img src='https://i.imgur.com/i7RJlYC.png' alt='pokedex' className='Icons'/> </Link></li>
             <br />
             <li><Link to='/ruels'><button>Ruels</button></Link></li>
          </ul>

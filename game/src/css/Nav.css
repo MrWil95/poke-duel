@@ -37,6 +37,10 @@ a {
    -webkit-text-stroke: 1px blue;
 }
 
+.Icons {
+   width: 35%;
+}
+
 @media (min-width: 375px) {
    .Nav {
       margin-top: 6em;

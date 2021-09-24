@@ -1,9 +1,10 @@
 .Home {
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/AtkIXcu.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/BHNjqOx.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -2em;
   text-align: center;
+  position: relative;
+  top: -2em;
   /* opacity: 0; */
   /* animation: appear 1s ease 5s forwards; */
 }
