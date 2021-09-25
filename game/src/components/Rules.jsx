@@ -7,15 +7,15 @@ export default function Rules() {
          <Link to='/'>
             <h1>Poké Duel</h1>
          </Link>
-         <img src='https://i.imgur.com/eiqRS40.png' alt='original starter pokémon' />
-         <p>Welcome to the game you all know and love made from React! Make your way to the character select page to see 
-            our selection of players. Here you can select any character in our roster, or add one that we migt not have yet.
-         </p>
-         <img src='https://i.imgur.com/cEktmN3.png' alt='pokémon battling' />
-         <p>After selecting a character your battle begins. Select your attack and watch it throw some damage your oponents
-            way! Attacks will deal more damage if their type is paired with their opposite. Once you've won enter you're trainer
-            id for the records.
-         </p>
+         <img src='https://i.imgur.com/0Bo95yc.png' alt='professor oak' />
+         <p>Welcome trainers! We're so glad you've come to join us on this journey to becoming
+            a great Pokémon master. We'll start off in the main menu where we'll be able to choose
+            to start the game or add some more pokémon. When adding your pokémon make sure to hyphenate
+            the attacks you want to generate and seperate them with only a space. From there you'll be
+            taken to see and select your pokémon to battle. You'll notice this section is currently under
+            construction, while we work on it we'd love for you to reach out with any and all suggestions
+            on what we can do to improve. You know what they say, 'You Gotta Catch Them All!', and we intend
+            to.</p>
       </div>
    )
 }

@@ -14,6 +14,9 @@ console.log(process.env.REACT_APP_AIRTABLE_BASE)
 function App() {
   return (
     <div className='App'>
+      <Route exact path='/rules'>
+        <Rules />
+      </Route>
       <Route exact path='/'>
         <Home />
       </Route>
@@ -28,9 +31,6 @@ function App() {
       </Route>
       <Route path='/allpokemon/:id/edit'>
           <EditPokemon />
-      </Route>
-      <Route exact path='/rules'>
-        <Rules />
       </Route>
       <Route exact path='/winnerinfo'>
         <WinnerInfo />

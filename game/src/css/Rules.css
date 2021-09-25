@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
 
-.Ruels {
+.Rules {
    display: grid;
    grid-template-columns: 100%;
    grid-template-rows: 16.65% 27.9% 31% 26% 14%;
    width: 100vw;
    height: 100vh;
    font-family: 'Boogaloo', cursive;
+   background-color: rgb(146, 146, 146)
 }
 
-.Ruels a {
+.Rules a {
    text-decoration: none;
    color: yellow;
    -webkit-text-stroke: 1.5px blue;
@@ -17,12 +18,16 @@
    font-size: 1.50em;
 }
 
-.Ruels img {
+.Rules img {
    width: 75vw;
-   margin: 0 auto;
+   margin: 0 auto 2em auto;
 }
 
-.Ruels p {
-   margin: .75em .6em .85em .6em;
+.Rules p {
+   background-color: black;
+   height: 140%;
+   margin: 2em .6em .85em .6em;
+   padding: 1.2em .25em .8em .25em;
    text-align: center;
+   color: white;
 }
