@@ -18,11 +18,13 @@ export default function CharacterSelect() {
 
    }, [])
 
-   const nextImage = () => {
+   const nextImage = (e) => {
+      e.preventDefault()
       setCurrentImage(currentimage === length - 1 ? 0 : currentimage + 1)
    }
 
-   const prevImage = () => {
+   const prevImage = (e) => {
+      e.preventDefault()
       setCurrentImage(currentimage === 0 ? length - 1 : currentimage - 1)
    }
 
@@ -31,30 +33,32 @@ export default function CharacterSelect() {
    }
 
    return (
-      <div className='Character'>
-         <Link to='/'>
-            <h1>Poké Duel</h1>
-         </Link>
-         <FaArrowAltCircleLeft className='left-arrow' onClick={prevImage}/>
-         <FaArrowAltCircleRight className='right-arrow' onClick={nextImage}/>
-            {allpokemon?.map((currentpokemon, index) => {
-               return (
-                  <div className={index === currentimage ? 'character-slide' : 'character-select'} key={index}>
-                     {index === currentimage && (
-                     <div className='character-info'>
-                        <div className='buttons'>
-                           <Link to={`/allpokemon/${currentpokemon.id}/edit`}><h5>Edit</h5></Link>
-                           <DeleteButton id={currentpokemon.id} />
-                        </div>
-                        <Link to={`/allpokemon/${currentpokemon.id}`}>
-                           <h2>{currentpokemon.fields.name}</h2>
-                           <h3>{currentpokemon.fields.type}</h3>
-                           <img src={currentpokemon.fields.image} alt={currentpokemon.fields.name} className='player' />
-                        </Link>
-                     </div>)}
-                  </div>
-               )
-            })}
+      <div className='StartCharacter'>
+         <div className='Character'>
+            <Link to='/'>
+               <h1>Poké Duel</h1>
+            </Link>
+            <FaArrowAltCircleLeft className='left-arrow' onClick={prevImage}/>
+            <FaArrowAltCircleRight className='right-arrow' onClick={nextImage}/>
+               {allpokemon?.map((currentpokemon, index) => {
+                  return (
+                     <div className={index === currentimage ? 'character-slide' : 'character-select'} key={index}>
+                        {index === currentimage && (
+                        <div className='character-info'>
+                           <div className='buttons'>
+                              <Link to={`/allpokemon/${currentpokemon.id}/edit`}><h5>Edit</h5></Link>
+                              <DeleteButton id={currentpokemon.id} />
+                           </div>
+                           <Link to={`/allpokemon/${currentpokemon.id}`}>
+                              <h2>{currentpokemon.fields.name}</h2>
+                              <h3>{currentpokemon.fields.type}</h3>
+                              <img src={currentpokemon.fields.image} alt={currentpokemon.fields.name} className='player' />
+                           </Link>
+                        </div>)}
+                     </div>
+                  )
+               })}
+         </div>
       </div>
    )
 } 

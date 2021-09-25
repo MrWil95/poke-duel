@@ -10,7 +10,7 @@ export default function Nav() {
    return (
       <div className='Nav'>
             <div clasName='pulse'>
-               <Link to='/allpokemon' className='wobble'><img src='https://i.imgur.com/w6kuTbo.png' alt='pokeball' className='Icons' /></Link>
+               <Link to='/allpokemon' className='wobble'><img src='https://i.imgur.com/yjq4Hgb.png' alt='pokeball' className='Icons' /></Link>
             </div>
             <label className='Label'>Start</label>
             <br />
