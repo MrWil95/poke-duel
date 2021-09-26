@@ -1,12 +1,7 @@
 .Home {
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/BHNjqOx.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   text-align: center;
   position: relative;
   top: -2em;
-  /* opacity: 0; */
-  /* animation: appear 1s ease 5s forwards; */
 }
 
 .Home-header {
@@ -27,26 +22,11 @@
   text-decoration: none;
 }
 
-/* @keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */
-
-/* @media (min-width: 320px) {
-  .Home-header {
-    height: 28vh;
-  }
-} */
-
-
-
-
-
-
-
-
-
+.background-image {
+  position: absolute;
+  z-index: -1;
+  top: -4em;
+  left: 0;
+  width: 105vw;
+  height: 140vh;
+}

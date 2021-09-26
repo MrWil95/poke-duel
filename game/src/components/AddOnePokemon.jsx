@@ -40,7 +40,7 @@ export default function AddPokémon() {
 
    return (
       <div className='Add'>
-         <Link to='/'>
+         <Link to='/home'>
             <h1>Poké Duel</h1>
          </Link>
          <Form 

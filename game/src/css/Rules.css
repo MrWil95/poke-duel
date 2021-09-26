@@ -20,14 +20,43 @@
 
 .Rules img {
    width: 75vw;
-   margin: 0 auto 2em auto;
+   max-width: 24em;
+   margin: 0 auto 4em auto;
 }
 
 .Rules p {
+   position: relative;
    background-color: black;
    height: 140%;
    margin: 2em .6em .85em .6em;
    padding: 1.2em .25em .8em .25em;
    text-align: center;
    color: white;
+}
+
+@media (min-width: 375px) {
+   .Rules p {
+      font-size: 1.25em;
+      bottom: .5em;
+   }
+}
+
+@media (min-width: 750px) {
+   .Rules a {
+      font-size: 2.15em;
+   }
+
+   .Rules p {
+      font-size: 2.08em;
+   }
+}
+
+@media (min-width: 975px) {
+   .Rules a {
+      font-size: 2.62em;
+   }
+
+   .Rules p {
+      font-size: 2.3em;
+   }
 }

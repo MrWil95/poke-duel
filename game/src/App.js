@@ -14,10 +14,10 @@ console.log(process.env.REACT_APP_AIRTABLE_BASE)
 function App() {
   return (
     <div className='App'>
-      <Route exact path='/rules'>
+      <Route exact path='/'>
         <Rules />
       </Route>
-      <Route exact path='/'>
+      <Route exact path='/home'>
         <Home />
       </Route>
       <Route exact path='/allpokemon'>

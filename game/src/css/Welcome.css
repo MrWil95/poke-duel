@@ -1,0 +1,28 @@
+.Welcome {
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   width: 100vw;
+   height: 100vh;
+}
+
+.throw {
+   transform: translateX(300%) translateY(250%);
+   animation: throw 2.5s forwards;
+}
+
+.throwpokeball {
+   width: 20%;
+}
+
+@keyframes throw {
+   0% { transform: translateX(300%) translateY(250%); } 
+    12.5%{ transform: translateX(262.5%) translateY(215%) rotate(72deg); } 
+   25%{ transform: translateX(225%) translateY(186%) rotate(-72deg); } 
+   37.5%{ transform: translateX(187.5%) translateY(153.35%) rotate(72deg); } 
+   50%{ transform: translateX(150%) translateY(112%) rotate(-72deg); }
+   62.5%{ transform: translateX(112.5%) translateY(85.95%) rotate(72deg); } 
+   75%{ transform: translateX(75%) translateY(57.43%) rotate(-72deg); } 
+    87.5%{ transform: translateX(37.5%) translateY(22.68%) rotate(72deg); } 
+   100%{ transform: translateX(0%) translateY(0%) rotate(0deg); }
+}

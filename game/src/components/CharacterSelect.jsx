@@ -35,7 +35,7 @@ export default function CharacterSelect() {
    return (
       <div className='StartCharacter'>
          <div className='Character'>
-            <Link to='/'>
+            <Link to='/home'>
                <h1>Poké Duel</h1>
             </Link>
             <FaArrowAltCircleLeft className='left-arrow' onClick={prevImage}/>

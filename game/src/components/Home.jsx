@@ -6,11 +6,14 @@ export default function Home() {
    return (
       <div className='Home'>
          <div className='Home-header'>
-         <Link to='/'>
-            <h1>Poké Duel</h1>
-         </Link>
+            <div>
+               <Link to='/home'>
+                  <h1>Poké Duel</h1>
+               </Link>
+               <img src='https://i.imgur.com/BHNjqOx.jpg' alt='pokemon stadium' className='background-image'/>
+            </div>
+            <Nav />
          </div>
-         <Nav />
       </div>
    )
 }

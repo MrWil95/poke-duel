@@ -12,47 +12,23 @@ a {
    margin-bottom: 1em;
 }
 
-.pulse {
+.icons {
    position: relative;
-   width: 25%;
-}
-
-.pulse::before,
-.pulse::after {
-   content: '';
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   border-radius: 50%;
-}
-
-.pulse::before {
-   background: #f00;
-}
-
-.Icons {
+   z-index: 10;
    width: 20%;
+   max-width: 10em;
    margin-top: .5em;
    margin-bottom: .25em;
 }
 
-
-.Icons .pokeball {
-   width: 25%;
-   margin-top: .5em;
-   margin-bottom: .25em;
-}
 
 .wobble img {
    animation: wobble 3s infinite;
+   width: calc(20% + 2em);
 }
 
-.Label {
-   color: white;
+label {
+   font-size: 1.5em;
 }
 
 @keyframes wobble {
@@ -65,10 +41,62 @@ a {
    100% { transform: translateX(0%); } 
 } 
 
-@media (min-width: 375px) {
+@media (min-width: 500px) {
    .Nav {
-      margin-top: 6em;
+      grid-template-columns: auto;
+      grid-template-rows: 50% 50% ;
    }
 
- }
+   .wobble {
+      grid-column: 1 / 2;
+      grid-row: 2 / 2;
+      margin-left: 10em;
+   }
 
+   .pokedex {
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+      margin-right: 10em;
+   }
+
+   label {
+      position: relative;
+      bottom: 4em;
+   }
+
+   .start {
+      grid-column: 1 / 2;
+      grid-row: 2 / 2;
+      left: 5em;
+   }
+
+   .add {
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+      right: 5em;
+   }
+}
+
+@media (min-width: 750px) {
+   .pokedex {
+      width: calc(20% + 8em);
+   }
+
+   .wobble {
+      margin-left: 6em;
+   }
+
+   .start {
+      left: 2em;
+   }
+
+   .add {
+      right: 1em;
+   }
+}
+
+@media (min-width: 900px) {
+   .add {
+      right: 3.5em;
+   }
+}
