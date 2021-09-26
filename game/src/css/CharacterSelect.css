@@ -7,16 +7,20 @@ a {
 }
 
 .StartCharacter {
-   background-image: url('https://i.imgur.com/XcevuCa.jpg');
-   background-repeat: no-repeat;
-   background-position-x: center;
-   background-size: cover;
    display: grid;
    grid-template-rows: auto;
    font-family: 'Boogaloo', cursive;
    right: 2em;
+   width: 100vw;
    height: 100vh;
 
+}
+
+.pokedex-background {
+   position: absolute;
+   z-index: -1;
+   width: 100vw;
+   height: 100vh;
 }
 
 .StartCharacter h1 {
@@ -32,7 +36,7 @@ a {
 
 .character-select h2, h3 {
    letter-spacing: .2em;
-   padding: 0 .5em;
+   padding: 0 .25em;
 }
 
 .character-info {
@@ -41,6 +45,7 @@ a {
 
 .player {
    width: 35vw;
+   max-width: 15em;
    right: 2em;
 }
 
@@ -75,14 +80,88 @@ a {
 }
 
 @media (min-width: 375px) {
-   .StartCharacter {
-      
-   }
-
    .Character {
       position: relative;
       top: -6em;
       z-index: 0;
+   }
+}
+
+@media (min-width: 750px) {
+   .StartCharacter h1 {
+      font-size: 3.5em;
+   }
+
+   .character-link {
+      position: absolute;
+      top: -8em;
+      left: 22em;
+   }
+   
+   .character-link h2, h3 {
+      font-size: 2em;
+      position: relative;
+      top: 1em;
+   }
+
+   .player {
+      width: 45vw;
+   }
+
+   .buttons {
+      position: absolute;
+      top: -11em;
+      left: 16.5em;
+   }
+
+   .buttons h5 {
+      font-size: 2em;
+      margin-left: 4em;
+   }
+   
+   .left-arrow {
+      left: 75px;
+   }
+   
+   .right-arrow {
+      right: 75px;
+   }
+}
+
+@media (min-width: 1200px) {
+   .character-link {
+      position: absolute;
+      top: -8em;
+      left: 30em;
+   }
+   
+   .character-link h2, h3 {
+      font-size: 2em;
+      position: relative;
+      top: 1em;
+   }
+
+   .player {
+      width: 45vw;
+   }
+
+   .buttons {
+      position: absolute;
+      top: -13em;
+      left: 25em;
+   }
+
+   .buttons h5 {
+      font-size: 2em;
+      margin-left: 4em;
+   }
+   
+   .left-arrow {
+      left: 75px;
+   }
+   
+   .right-arrow {
+      right: 75px;
    }
 }
 

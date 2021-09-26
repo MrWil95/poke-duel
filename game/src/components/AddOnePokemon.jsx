@@ -59,6 +59,7 @@ export default function AddPokémon() {
             label={'Add'}
          />
          <DirectMessage />
+         <button className='togglebtn'></button>
       </div>
    )
 }

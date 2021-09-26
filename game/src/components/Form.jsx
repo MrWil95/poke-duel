@@ -8,43 +8,48 @@ export default function Form(props) {
          battleimage, setBattleImage, handleSubmit, label} = props
 
    return (
-      <form onSubmit={handleSubmit}>
-         <label>Name</label>
+      <form onSubmit={handleSubmit} className='NewPokemon'>
          <input
             type='text'
             value={name}
+            placeholder='Name'
             onChange={(e) => setName(e.target.value)}
+            className='data'
          />
          <br />
-         <label>Type</label>
          <input 
             type='text'
             value={type}
+            placeholder='Type'
             onChange={(e) => setType(e.target.value)}
+            className='data'
          />
          <br />
-         <label>Attacks</label>
          <input
             type='text'
             value={attacks}
+            placeholder='Attacks'
             onChange={(e) => setAttacks(e.target.value)}
+            className='data'
          />
          <br />
-         <label>Image</label>
          <input
             type='text'
             value={image}
+            placeholder='Image'
             onChange={(e) => setImage(e.target.value)}
+            className='data'
          />
          <br />
-         <label>Battle Image</label>
          <input 
             type='text'
             value={battleimage}
+            placeholder='Battle Image'
             onChange={(e) => setBattleImage(e.target.value)}
+            className='data'
          />
          <br />
-         <button type='submit'  disabled={!name || !type || !attacks || !image || !battleimage}>{label} Pokémon</button>
+         <button type='submit'  disabled={!name || !type || !attacks || !image || !battleimage} className='add-pokemon'>{label} Pokémon</button>
       </form>
    )
 }

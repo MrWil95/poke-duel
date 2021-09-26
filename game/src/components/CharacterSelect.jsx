@@ -34,6 +34,7 @@ export default function CharacterSelect() {
 
    return (
       <div className='StartCharacter'>
+         <img src='https://i.imgur.com/XcevuCa.jpg' alt='pokedex background' className='pokedex-background'/>
          <Link to='/home'>
             <h1>Poké Duel</h1>
          </Link>
@@ -49,7 +50,7 @@ export default function CharacterSelect() {
                               <Link to={`/allpokemon/${currentpokemon.id}/edit`}><h5>Edit</h5></Link>
                               <DeleteButton id={currentpokemon.id} />
                            </div>
-                           <Link to={`/allpokemon/${currentpokemon.id}`}>
+                           <Link to={`/allpokemon/${currentpokemon.id}`} className='character-link'>
                               <h2>{currentpokemon.fields.name}</h2>
                               <h3>{currentpokemon.fields.type}</h3>
                               <img src={currentpokemon.fields.image} alt={currentpokemon.fields.name} className='player' />
