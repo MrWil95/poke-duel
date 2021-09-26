@@ -2,6 +2,7 @@ import '../css/AddPokemon.css'
 import {useState} from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import Form from './Form'
+import DirectMessage from './DirectMessage'
 import axios from 'axios'
 
 export default function AddPokémon() {
@@ -57,6 +58,7 @@ export default function AddPokémon() {
             handleSubmit={handleSubmit}
             label={'Add'}
          />
+         <DirectMessage />
       </div>
    )
 }

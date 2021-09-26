@@ -1,5 +1,5 @@
 form {
-   margin: 4em 5em;
+   margin: .5em 5em 4em 5em;
 }
 
 label {
@@ -10,4 +10,10 @@ input {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+@media (min-width: 375px) {
+   form {
+      margin: 4em auto;
+   }
 }

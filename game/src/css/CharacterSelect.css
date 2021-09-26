@@ -15,15 +15,11 @@ a {
    grid-template-rows: auto;
    font-family: 'Boogaloo', cursive;
    right: 2em;
+   height: 100vh;
+
 }
 
-.Character {
-   display: grid;
-   grid-template-rows: auto;
-   right: 2em;
-}
-
-.Character h1 {
+.StartCharacter h1 {
    color: yellow;
    -webkit-text-stroke: 1.5px blue;
    font-size: 2.5em;
@@ -67,6 +63,7 @@ a {
    position: absolute;
    top: 10em;
    font-size: 2em;
+   z-index: 1;
 }
 
 .left-arrow {
@@ -76,4 +73,18 @@ a {
 .right-arrow {
    right: 25px;
 }
+
+@media (min-width: 375px) {
+   .StartCharacter {
+      
+   }
+
+   .Character {
+      position: relative;
+      top: -6em;
+      z-index: 0;
+   }
+}
+
+
 

@@ -34,12 +34,12 @@ export default function CharacterSelect() {
 
    return (
       <div className='StartCharacter'>
+         <Link to='/home'>
+            <h1>Poké Duel</h1>
+         </Link>
+         <FaArrowAltCircleLeft className='left-arrow' onClick={prevImage}/>
+         <FaArrowAltCircleRight className='right-arrow' onClick={nextImage}/>
          <div className='Character'>
-            <Link to='/home'>
-               <h1>Poké Duel</h1>
-            </Link>
-            <FaArrowAltCircleLeft className='left-arrow' onClick={prevImage}/>
-            <FaArrowAltCircleRight className='right-arrow' onClick={nextImage}/>
                {allpokemon?.map((currentpokemon, index) => {
                   return (
                      <div className={index === currentimage ? 'character-slide' : 'character-select'} key={index}>

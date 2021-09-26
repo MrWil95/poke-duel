@@ -20,8 +20,7 @@ export default function Opponent(props) {
       }
       getOnePokemon()
       
-      console.log(health)
-   }, [health])
+   }, [])
 
    useEffect(() => {
       setHealth(prevHealth => prevHealth - damage)

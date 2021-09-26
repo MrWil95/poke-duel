@@ -21,6 +21,12 @@ a {
    margin-bottom: .25em;
 }
 
+.pokedex {
+   position: absolute;
+   right: 1em;
+   bottom: -17em;
+   width: calc(20% + 12em);
+}
 
 .wobble img {
    animation: wobble 3s infinite;
@@ -50,10 +56,11 @@ label {
    .wobble {
       grid-column: 1 / 2;
       grid-row: 2 / 2;
-      margin-left: 10em;
+      margin-left: 4em;
    }
 
    .pokedex {
+      position: unset;
       grid-column: 2 / 2;
       grid-row: 2 / 2;
       margin-right: 10em;
@@ -67,20 +74,18 @@ label {
    .start {
       grid-column: 1 / 2;
       grid-row: 2 / 2;
-      left: 5em;
+      left: 1.15em;
    }
 
    .add {
       grid-column: 2 / 2;
       grid-row: 2 / 2;
-      right: 5em;
+      right: 0;
    }
 }
 
 @media (min-width: 750px) {
-   .pokedex {
-      width: calc(20% + 8em);
-   }
+   .pokedex
 
    .wobble {
       margin-left: 6em;
@@ -96,7 +101,11 @@ label {
 }
 
 @media (min-width: 900px) {
+   .wobble {
+      margin-left: 6.75em; 
+   }
+   
    .add {
-      right: 3.5em;
+      right: 1em;
    }
 }

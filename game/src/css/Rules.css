@@ -3,7 +3,7 @@
 .Rules {
    display: grid;
    grid-template-columns: 100%;
-   grid-template-rows: 16.65% 27.9% 31% 26% 14%;
+   grid-template-rows: 15% 85%;
    width: 100vw;
    height: 100vh;
    font-family: 'Boogaloo', cursive;
@@ -25,9 +25,10 @@
 }
 
 .Rules p {
-   position: relative;
+   position: absolute;
+   top: 14.5em;
    background-color: black;
-   height: 140%;
+   height: 46%;
    margin: 2em .6em .85em .6em;
    padding: 1.2em .25em .8em .25em;
    text-align: center;
@@ -36,18 +37,40 @@
 
 @media (min-width: 375px) {
    .Rules p {
-      font-size: 1.25em;
-      bottom: .5em;
+      font-size: 1.10em;
+      top: 13em;
+      height: 48%;
    }
 }
 
 @media (min-width: 750px) {
+   .Rules {
+      grid-template-columns: 50% 50%;
+   }
+
    .Rules a {
-      font-size: 2.15em;
+      grid-column: 2 / 2;
+      grid-row: 1 / 2;
+      position: absolute;
+      right: 15.5em;
+   }
+
+   .Rules img {
+      grid-column: 1 / 2;
+      grid-row: 2 / 2;
+      margin: unset;
+      margin-bottom: 1em;
+      margin-left: 1em;
+      width: 15em;
    }
 
    .Rules p {
-      font-size: 2.08em;
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+      font-size: 1.3em;
+      top: 4em;
+      right: .5em;
+      width: 65vw;
    }
 }
 
@@ -58,5 +81,6 @@
 
    .Rules p {
       font-size: 2.3em;
+      top: 13em;
    }
 }

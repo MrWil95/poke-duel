@@ -1,12 +1,15 @@
-import {Link, useHistory} from 'react-router-dom'
 import '../css/Rules.css'
+import {Link, useHistory} from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
+// import useSound from 'use-sound'
+// import buttonclick from '../sounds/button-click.mp3' 
 
 export default function Rules() {
    const history = useHistory()
+   // const [buttonclick] = useSound('../sounds/button-click.mp3')
 
    return (
-      <div className='Rules'>
+      <div className='Rules' >
          <Link to='/home'>
             <h1>Poké Duel</h1>
          </Link>
