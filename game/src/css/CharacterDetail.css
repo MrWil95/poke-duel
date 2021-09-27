@@ -67,6 +67,17 @@
    }
 }
 
+@media (min-width: 1024px) {
+   .details-background {
+      top: -25em;
+   }
+
+   .Player {
+      margin-top: 9em;
+      margin-left: 10em;
+   }
+}
+
 @media (min-width: 1200px) {
    .Player {
       margin-top: 15em;

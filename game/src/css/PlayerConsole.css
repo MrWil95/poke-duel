@@ -80,6 +80,12 @@
    }
 }
 
+@media (min-width: 1024px) {
+   .PlayerConsole {
+      margin-top: -9em;
+   }
+}
+
 @media (min-width: 1200px) {
    .PlayerConsole {
       margin-top: 9em;

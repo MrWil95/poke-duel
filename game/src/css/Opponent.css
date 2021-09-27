@@ -110,6 +110,16 @@
    }
 }
 
+@media (min-width: 1024px) {
+   .Image {
+      margin-top: 14em;
+   }
+
+   .elements h5 {
+      top: -3em;
+   }
+}
+
 @media (min-width: 1200px) {
    .Image {
       margin-top: 15em;
