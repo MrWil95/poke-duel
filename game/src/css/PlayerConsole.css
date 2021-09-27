@@ -44,16 +44,22 @@
    }
 }
 
-/* @media (min-height: 812px) {
+@media (min-height: 812px) {
    .PlayerConsole {
       margin-top: 8em;
    }
-} */
+}
 
 @media (min-width: 400px) {
    .PlayerConsole {
       margin-top: 8em;
       height: 8em;
+   }
+}
+
+@media (min-height: 823px) {
+   .PlayerConsole {
+      margin-top: 9.5em;
    }
 }
 
@@ -66,7 +72,7 @@
 
 @media (min-width: 750px) {
    .PlayerConsole {
-      margin-top: 10em;
+      margin-top: 2.5em;
    }
 
    .PlayerConsole h3 {
@@ -79,9 +85,9 @@
    }
 }
 
-@media (min-width: 750px) {
+@media (min-height: 1024px) {
    .PlayerConsole {
-      margin-top: 2.5em;
+      margin-top: 12.5em;
    }
 }
 

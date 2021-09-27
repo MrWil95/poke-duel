@@ -57,7 +57,6 @@
 @media (min-height: 812px) {
    .Player {
       margin-top: 16em;
-
    }
 }
 
@@ -68,10 +67,23 @@
    }
 }
 
+@media (min-height: 823px) {
+   .Player {
+      margin-top: 18em;
+   }
+}
+
 @media (min-width: 750px) {
    .Player {
       margin-top: 3em;
       margin-left: 8em;
+   }
+}
+
+@media (min-height: 1024px) {
+   .Player {
+      margin-top: 19em;
+      margin-left: 7em;
    }
 }
 

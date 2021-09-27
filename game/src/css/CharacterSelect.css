@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
 
 a {
+   position: relative;
+   z-index: 3;
    text-decoration: none;
    color: black;
    text-align: center;
+   height: 10em;
 }
 
 .StartCharacter {
@@ -45,14 +48,15 @@ a {
 
 .player {
    width: 35vw;
-   max-width: 20em;
+   max-width: 18em;
    right: 2em;
 }
 
 .buttons {
    display: flex;
    justify-content: center;
-   align-items: center; 
+   align-items: center;
+   z-index: 3;
 }
 
 .buttons h5 {
@@ -94,14 +98,15 @@ a {
 
    .character-link {
       position: absolute;
-      top: -8em;
-      left: 22em;
+      top: -7.5em;
+      left: 20em;
    }
    
    .character-link h2, h3 {
-      font-size: 2em;
+      font-size: 1.25em;
       position: relative;
       top: 1em;
+      left: 1em;
    }
 
    .player {
@@ -128,15 +133,39 @@ a {
    }
 }
 
+@media (min-height: 1024px) {
+   .character-link {
+      top: -18em;
+      left: 15em;
+   }
+
+   .buttons {
+      top: -23em;
+      left: 12em;
+   }
+}
+
 @media (min-width: 1024px) {
    .character-link {
-      top: -28em;
-      left: 25em;
+      top: -24em;
+      left: 23em;
    }
 
    .buttons {
       top: -31em;
       left: 20em;
+   }
+
+   .left-arrow, .right-arrow {
+      font-size: 3em;
+   }
+
+   .left-arrow {
+      left: 100px;
+   }
+   
+   .right-arrow {
+      right: 100px;
    }
 }
 

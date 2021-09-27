@@ -33,6 +33,19 @@
    }
 }
 
+@media (min-width: 1024px) {
+   .EditForm {
+      top: -90em;
+      right: 15em;
+   }
+
+   .EditForm button {
+      border-radius: 10px;
+      height: 3em;
+      top: 15em;
+   }
+}
+
 @media (min-width: 1200px) {
    .EditForm {
       bottom: 38em;
