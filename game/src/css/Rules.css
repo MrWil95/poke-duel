@@ -43,6 +43,12 @@
    }
 }
 
+@media (min-width: 400px) {
+   .Rules p {
+      top: 15em;
+   }
+}
+
 @media (min-width: 750px) {
    .Rules {
       grid-template-columns: 50% 50%;
@@ -82,6 +88,24 @@
    .Rules p {
       font-size: 2.3em;
       top: 13em;
+   }
+}
+
+@media (min-width: 1024px) {
+   .Rules a {
+      right: 9em;
+   }
+
+   .Rules img {
+      margin-bottom: unset;
+      margin-left: unset;
+      position: relative;
+      top: 14em;
+      margin-left: 2em;
+   }
+
+   .Rules p {
+      top: 9em;
    }
 }
 

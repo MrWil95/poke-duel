@@ -128,10 +128,20 @@ a {
    }
 }
 
+@media (min-width: 1024px) {
+   .character-link {
+      top: -28em;
+      left: 25em;
+   }
+
+   .buttons {
+      top: -31em;
+      left: 20em;
+   }
+}
+
 @media (min-width: 1200px) {
    .character-link {
-      position: absolute;
-      top: -8em;
       left: 30em;
    }
    
@@ -146,7 +156,6 @@ a {
    }
 
    .buttons {
-      position: absolute;
       top: -13em;
       left: 25em;
    }
