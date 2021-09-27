@@ -1,4 +1,4 @@
-import '../css/PlayerTraits.css'
+import '../css/PlayerConsole.css'
 import Healthbar from "./Healthbar"
 import Attacks from './Attacks'
 import {useEffect, useState} from 'react'
@@ -27,7 +27,7 @@ export default function PlayerConsole(props) {
    }
 
    return (
-      <div className='PlayerTraits'>
+      <div className='PlayerConsole'>
          <Healthbar />
          <h3>{currentpokemon.fields.name}</h3>
          <h4>{currentpokemon.fields.type}</h4>

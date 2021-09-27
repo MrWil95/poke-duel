@@ -1,5 +1,3 @@
-
-
 .Attacks button {
    width: 4em;
    height: 4em;
@@ -8,4 +6,10 @@
    margin-left: .7em;
    border-radius: 30px;
    background-color: rgba(248, 0, 0, 0.8);
+}
+
+@media (min-width: 750px) {
+   .Attacks button {
+      width: 15vw;
+   }
 }

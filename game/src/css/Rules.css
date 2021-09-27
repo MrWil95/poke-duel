@@ -84,3 +84,22 @@
       top: 13em;
    }
 }
+
+@media (min-width: 1200px) {
+   .Rules a {
+      right: 11em;
+   }
+   
+   .Rules img {
+      margin-bottom: unset;
+      margin-left: unset;
+      position: relative;
+      top: 8em;
+      margin-left: 2em;
+   }
+
+   .Rules p {
+      top: 5em;
+      height: 55%;
+   }
+}

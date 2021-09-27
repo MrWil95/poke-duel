@@ -33,6 +33,7 @@ export default function CharacterDetails() {
 
    return (
       <div className='Details'>
+         <img src='https://i.imgur.com/WNe7PDz.png' alt='battle grounds' className='details-background'/>
          <Opponent damage={damage}/>
          <img src={currentpokemon.fields?.battleimage} alt={currentpokemon.fields?.name} className='Player' />
          <PlayerConsole dealtDamage={dealtDamage} />

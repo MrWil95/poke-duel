@@ -1,6 +1,40 @@
 .EditForm {
    position: relative;
-   bottom: 37em;
+   bottom: 36em;
+   right: 4em;
    width: 100vw;
    height: 60vh;
+   z-index: 2;
+}
+
+
+@media (min-width: 350px) {
+   .EditForm {
+      bottom: 39em;
+      right: 5em;
+   }
+}
+
+@media (min-width: 375px) {
+   .EditForm {
+      bottom: 42em;
+   }
+}
+
+@media (min-width: 400px) {
+   .EditForm {
+      bottom: 44em;
+   }
+}
+
+@media (min-width: 750px) {
+   .EditForm {
+      bottom: 35em;
+   }
+}
+
+@media (min-width: 1200px) {
+   .EditForm {
+      bottom: 38em;
+   }
 }
