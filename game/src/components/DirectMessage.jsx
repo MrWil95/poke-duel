@@ -62,7 +62,7 @@ export default function DirectMessage() {
                className='info'
             />
             <br />
-            <button type='submit' className='send'>Send</button>
+            <button type='submit' className='send' disabled={!toSend}>Send</button>
          </form>
          
       </div>

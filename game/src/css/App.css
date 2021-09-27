@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
 
-body {
+html,body {
   font-family: 'Boogaloo', cursive;
+  overflow-x: hidden;
 }
 
 .App {

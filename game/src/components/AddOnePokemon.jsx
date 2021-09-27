@@ -11,6 +11,7 @@ export default function AddPokémon() {
    const [attacks, setAttacks] = useState('')
    const [image, setImage] = useState('')
    const [battleimage, setBattleImage] = useState('')
+   const [showform, setShowForm] = useState(false)
    
 
    const airtableBase = process.env.REACT_APP_AIRTABLE_BASE
@@ -44,22 +45,25 @@ export default function AddPokémon() {
          <Link to='/home'>
             <h1>Poké Duel</h1>
          </Link>
-         <Form 
-            name={name}
-            setName={setName}
-            type={type}
-            setType={setType}
-            attacks={attacks}
-            setAttacks={setAttacks}
-            image={image}
-            setImage={setImage}
-            battleimage={battleimage}
-            setBattleImage={setBattleImage}
-            handleSubmit={handleSubmit}
-            label={'Add'}
-         />
-         <DirectMessage />
-         <button className='togglebtn'></button>
+         {showform ? (<DirectMessage />) : 
+            (<Form 
+               name={name}
+               setName={setName}
+               type={type}
+               setType={setType}
+               attacks={attacks}
+               setAttacks={setAttacks}
+               image={image}
+               setImage={setImage}
+               battleimage={battleimage}
+               setBattleImage={setBattleImage}
+               handleSubmit={handleSubmit}
+               label={'Add'}
+            />)}
+         <button className='togglebtn' onClick={(e) => {
+            e.preventDefault() 
+            setShowForm(!showform)
+         }}>{`${showform ?  'Add a Pokémon' : 'Reach out'}`}</button>
       </div>
    )
 }

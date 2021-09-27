@@ -11,7 +11,7 @@
 
 .add-pokemon {
    position: absolute;
-   left: 7.5em;
+   left: 9em;
    width: 30vw;
    max-width: 5em;
    border-radius: 5px;
@@ -19,7 +19,7 @@
 
 @media (min-width: 350px) {
    .NewPokemon {
-      margin: 4em 3em 7em 6.5em;
+      margin: 4em 4em 7em 5.5em;
    }
 
    .data {
@@ -28,17 +28,22 @@
    }
 
    .add-pokemon {
-      left: 10.25em;
+      left: 10.5em;
    }
 }
 
 @media (min-width: 400px) {
+   .NewPokemon {
+      margin-right: 3em;
+      margin-left: 6.5em;
+   }
+
    .data {
       margin-left: 2em;
    }
 
    .add-pokemon {
-      left: 10.5em;
+      left: 12.5em;
    }
 }
 
