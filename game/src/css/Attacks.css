@@ -13,3 +13,15 @@
       width: 15vw;
    }
 }
+
+@media (min-width: 1024px) {
+   .Attacks button {
+      font-size: 1.25em;
+   }
+}
+
+@media (min-width: 1200px) {
+   .Attacks button {
+      font-size: 1.5em;
+   }
+}

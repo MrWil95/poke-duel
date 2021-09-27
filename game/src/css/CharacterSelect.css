@@ -45,7 +45,7 @@ a {
 
 .player {
    width: 35vw;
-   max-width: 15em;
+   max-width: 20em;
    right: 2em;
 }
 
@@ -142,13 +142,15 @@ a {
 
 @media (min-width: 1200px) {
    .character-link {
-      left: 30em;
+      top: -15em;
+      left: 27em;
    }
    
    .character-link h2, h3 {
       font-size: 2em;
       position: relative;
       top: 1em;
+      left: .75em;
    }
 
    .player {
@@ -156,13 +158,17 @@ a {
    }
 
    .buttons {
-      top: -13em;
+      top: -22em;
       left: 25em;
    }
 
    .buttons h5 {
       font-size: 2em;
       margin-left: 4em;
+   }
+
+   .left-arrow, .right-arrow {
+      font-size: 4em;
    }
    
    .left-arrow {

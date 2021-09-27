@@ -49,8 +49,28 @@
    }
 }
 
+@media (min-width: 900px) {
+   .togglebtn {
+      bottom: 3em;
+      left: 32.5em;
+   }
+}
+
 @media (min-width: 1000px) {
    .togglebtn {
-      left: 34em;
+      font-size: 1.5em;
+      bottom: 16em;
+      left: 18em;
+   }
+}
+
+@media (min-width: 1200px) {
+   .Add h1 {
+      font-size: 5em;
+   }
+   
+
+   .togglebtn {
+      left: 21em;
    }
 }

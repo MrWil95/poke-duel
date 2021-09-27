@@ -15,7 +15,7 @@
    margin-top: 8em;
    margin-left: 1em;
    width: 35vw;
-   max-width: 10em;
+   max-width: 15em;
 }
 
 .OpponentHealthbar {
@@ -62,11 +62,18 @@
 
 @media (min-width: 375px) {
    .Image {
-      margin-top: 16em;
+      margin-top: 12em;
    }
 
    .elements {
       font-size: 1.25em;
+   }
+}
+
+@media (min-height: 812px) {
+   .Image {
+      margin-top: 17em;
+
    }
 }
 
@@ -112,7 +119,11 @@
 
 @media (min-width: 1024px) {
    .Image {
-      margin-top: 14em;
+      margin-top: 20em;
+   }
+
+   .elements {
+      font-size: 1.25em;
    }
 
    .elements h5 {
@@ -122,12 +133,12 @@
 
 @media (min-width: 1200px) {
    .Image {
-      margin-top: 15em;
-      margin-left: 14em;
+      margin-top: 20em;
+      margin-left: 12em;
    }
 
    .elements {
-      font-size: 1.25em;
+      font-size: 1.5em;
       margin-right: 5em;
    }
 }

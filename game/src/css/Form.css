@@ -19,7 +19,7 @@
 
 @media (min-width: 350px) {
    .NewPokemon {
-      margin: 4em 4em 7em 5.5em;
+      margin: 4em 4.5em 7em 5em;
    }
 
    .data {
@@ -71,21 +71,33 @@
 }
 
 @media (min-width: 1000px) {
+   .NewPokemon {
+      margin-top: 15em;
+      margin-left: 0;
+   }
    .data {
-      margin-left: 25.5em;
+      font-size: 1.5em;
+      width: 35vw;
+      margin-left: 14.5em;
    }
 
    .add-pokemon {
-      left: 36em;
+      font-size: 1.5em;
+      bottom: 22em;
+      left: 19.5em;
    }
 }
 
 @media (min-width: 1200px) {
+   .NewPokemon {
+      margin-left: -21.5em;
+   }
+
    .data {
       margin-left: 31em;
    }
 
    .add-pokemon {
-      left: 42em;
+      left: 22.5em;
    }
 }
